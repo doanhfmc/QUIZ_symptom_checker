@@ -12,7 +12,8 @@ import Result4 from "./Quiz_code/component/Result/Result4.jsx";
 import Result5 from "./Quiz_code/component/Result/Result5.jsx";
 import Result6 from "./Quiz_code/component/Result/Result6.jsx";
 import Question2 from "./Quiz_code/component/Question2.jsx";
-
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-FXKNQKBJYX");
 const App = () => {
   return (
     <HashRouter>

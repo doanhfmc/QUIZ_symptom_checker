@@ -8,14 +8,14 @@ const Layout = () => {
   const id = location.pathname.split("/")[1];
 
   useEffect(() => {
-    if (id === "skin" || id === "m") {
+    if (id === "skin" || id === "intimate") {
       increasePopulation({ condition: id });
     }
   }, []); // ✅ Thêm dependency để tránh warning React
 
   return (
     <>
-      <h1>Symptom checker</h1>
+      <h1 style={{ color: "red" }}>Symptom checker</h1>
       <Suspense fallback={<p></p>}>
         <Outlet />
       </Suspense>

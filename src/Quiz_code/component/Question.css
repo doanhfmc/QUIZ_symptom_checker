@@ -1,6 +1,8 @@
 .question_2 {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  align-items: center;
 }
 
 .question_2 h3 {
@@ -9,7 +11,7 @@
 
 .option-container {
   display: grid;
-  gap: 10px; /* Khoảng cách giữa các ô */
+  gap: 80px; /* Khoảng cách giữa các ô */
   justify-content: center;
   align-items: center;
 }
@@ -38,5 +40,54 @@
   background-color: #f5f5f5;
 }
 .activeBG {
-  background-color: red !important;
+  border: 2px solid #d33;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: red;
+  position: relative;
+  margin-top: 30px;
+  padding-top: 50px;
+  color: white;
+}
+.container1 {
+  position: relative;
+  width: 320px;
+  text-align: center;
+  border: none;
+  background: white;
+}
+.question-option {
+  color: rgb(177, 5, 5);
+}
+.content-box:hover {
+  cursor: pointer;
+}
+.content-box {
+  border: 2px solid #d33;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  margin-top: 30px;
+  padding-top: 50px; /* Để có khoảng cách giữa ảnh và nội dung */
+}
+
+.circle-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white; /* Tạo viền trắng để không bị mất viền hộp */
+  background-color: white;
+  position: absolute;
+  top: -10px; /* Đưa hình tròn lên cao hơn */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Đảm bảo ảnh luôn nằm trên viền hộp */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng để làm nổi bật */
+}
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }

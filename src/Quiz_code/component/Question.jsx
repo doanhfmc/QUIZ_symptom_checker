@@ -9,6 +9,8 @@ function Question({ condition }) {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   // const [answers, setAnswers] = useState([]);
   const [answers_select, setAnswers_select] = useState([]);
+  const [showRef, setShowRef] = useState([]);
+
   const [answersid, setAnswerid] = useState([]);
   const [type, setType] = useState("multi");
   const { increasePopulation } = useBearStore();
@@ -49,14 +51,15 @@ function Question({ condition }) {
 
   const question = questionsData[condition][currentQuestion - 1];
   useEffect(() => {
-    if (question?.id === 2) {
-      setType("single");
-    }
     if (answersid === 10) {
       setAnswers_select([answers_select[answers_select.length - 1]]);
       setType("single");
+      return;
     } else {
       setType("multi");
+    }
+    if (question?.id === 2 || question?.id === 3) {
+      setType("single");
     }
   }, [question?.id, answersid]);
 
@@ -67,7 +70,6 @@ function Question({ condition }) {
       action: `ID  ${answersid} của câu ${question?.id} `,
       label: `câu trả lời ${answersid}`,
     });
-    console.log(answersid);
 
     increasePopulation({
       //
@@ -111,7 +113,13 @@ function Question({ condition }) {
 
   return (
     <div>
-      <div className="question_2">
+      <div
+        className="question_2"
+        onClick={(e) => {
+          e.stopPropagation();
+          setShowRef([]);
+        }}
+      >
         <h3>{questionsData[condition][currentQuestion - 1]?.text_1}</h3>
         <h2 className="question-option">
           {questionsData[condition][currentQuestion - 1]?.text}
@@ -123,30 +131,101 @@ function Question({ condition }) {
           } `}
         >
           {questionsData[condition][currentQuestion - 1]?.options.map(
-            (option, index) => (
-              <button
-                className={`container1 `}
-                key={index}
-                onClick={() => handleAnswer(option)} // Thêm logic sự kiện click
-              >
-                <img
-                  className="circle-img"
-                  src={option?.img}
-                  alt={option?.text}
-                />
-                <div
+            (option, index) =>
+              questionsData[condition][currentQuestion - 1]?.id !== 3 ? (
+                <button
+                  className={`container1 `}
+                  key={index}
+                  onClick={() => handleAnswer(option)} // Thêm logic sự kiện click
+                >
+                  <img
+                    className="circle-img"
+                    src={option?.img}
+                    alt={option?.text}
+                  />
+                  <div
+                    className={` ${
+                      answers_select?.filter((item) => item === option?.text)
+                        ?.length !== 0
+                        ? "activeBG"
+                        : "content-box"
+                    }`}
+                  >
+                    {option?.text}
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "start",
+                        gap: 5,
+                        marginTop: 5,
+                        position: "relative",
+                        paddingRight: 40,
+                      }}
+                    >
+                      {showRef.filter((item) => item.id === option._id)[0]
+                        ?.show && (
+                        <p
+                          style={{
+                            borderTop: 2,
+                            borderStyle: "solid",
+                            borderBottom: "none",
+                            borderLeft: "none",
+                            borderRight: "none",
+                            borderColor: "gray",
+                          }}
+                        >
+                          {option?.desc}
+                        </p>
+                      )}
+                      {option?.desc && (
+                        <p
+                          onClick={(e) => {
+                            e.stopPropagation();
+
+                            setShowRef([
+                              ...showRef,
+                              {
+                                id: option._id,
+                                show: !showRef.filter(
+                                  (item) => item.id === option._id
+                                )[0]?.show,
+                              },
+                            ]);
+                          }}
+                          style={{
+                            position: "absolute",
+                            top: -8,
+                            right: 0,
+                          }}
+                        >
+                          Ref
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </button>
+              ) : (
+                <button
                   className={` ${
                     answers_select?.filter((item) => item === option?.text)
                       ?.length !== 0
                       ? "activeBG"
-                      : "content-box"
+                      : ""
                   }`}
+                  key={index}
+                  onClick={() => handleAnswer(option)} // Thêm logic sự kiện click
+                  style={{
+                    borderRadius: "100%",
+                    height: 100,
+                    width: 100,
+                    marginTop: 30,
+                    paddingTop: 50,
+                  }}
                 >
-                  {" "}
-                  {question.id !== 3 && option?.text}
-                </div>
-              </button>
-            )
+                  <div> {option?.text}</div>
+                </button>
+              )
           )}
         </div>
         <button onClick={nextPage} disabled={answers_select.length === 0}>

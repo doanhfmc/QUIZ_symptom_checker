@@ -22,31 +22,43 @@ export const questionsData = {
         {
           _id: 20,
           text: "Các mảng đỏ tròn hoặc bầu dục, ở giữa lành, viền xung quanh có vảy. Thường xuất hiện ở thân mình, cổ, tay hoặc chân.",
+          desc: "Các mảng đỏ tròn hoặc bầu dục, ở giữa lành, viền xung quanh có vảy. Thường xuất hiện ở thân mình, cổ, tay hoặc chân.",
+
           img: img,
         },
         {
           _id: 21,
           text: "Các mảng đỏ, có vảy, hình tròn. Thường xuất hiện ở  da đầu, mặt, cổ, tay, thân hoặc bàn chân.",
+          desc: "Các mảng đỏ, có vảy, hình tròn. Thường xuất hiện ở  da đầu, mặt, cổ, tay, thân hoặc bàn chân.",
+
           img: img,
         },
         {
           _id: 22,
           text: "Da bong tróc từ đỏ đến trắng bạc, có thể nứt nẻ Thường xuất hiện giữa các ngón chân Có thể có mùi hôi.",
+          desc: "Da bong tróc từ đỏ đến trắng bạc, có thể nứt nẻ Thường xuất hiện giữa các ngón chân Có thể có mùi hôi.",
+
           img: img,
         },
         {
           _id: 23,
           text: "Mảng đỏ viền rõ, có vảy Thường xuất hiện ở vùng nếp gấp như háng hoặc vùng kín",
+          desc: "Mảng đỏ viền rõ, có vảy Thường xuất hiện ở vùng nếp gấp như háng hoặc vùng kín",
+
           img: img,
         },
         {
           _id: 24,
           text: "Mảng da có màu nâu, hồng hoặc trắng, hơi vảy và lan rộng trên thân, cổ, hoặc lưng",
+          desc: "Mảng da có màu nâu, hồng hoặc trắng, hơi vảy và lan rộng trên thân, cổ, hoặc lưng",
+
           img: img,
         },
         {
           _id: 25,
           text: "Mảng đỏ hoặc nâu, có vảy, thường xuất hiện ở các nếp gấp như giữa ngón chân, vùng háng",
+          desc: "Mảng đỏ hoặc nâu, có vảy, thường xuất hiện ở các nếp gấp như giữa ngón chân, vùng háng",
+
           img: img,
         },
       ],

@@ -64,7 +64,10 @@ body {
 }
 
 .slider {
-  margin: 20px 0;
+  margin: 20px 0px;
+  padding: 20px;
+  background-color: #d32f2f;
+  color: white;
 }
 
 .slider-container {
@@ -76,6 +79,9 @@ body {
 .slide {
   text-align: center;
   margin: 0 10px;
+  color: #d32f2f;
+  background-color: white;
+  margin-bottom: 5px;
 }
 
 .slide img {
@@ -84,7 +90,24 @@ body {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-
+.slide_desc {
+  display: flex;
+  align-items: start !important;
+  justify-content: start !important;
+  text-align: start !important;
+  padding-top: 10px;
+  flex-direction: column;
+}
+.slide_ref {
+  display: flex;
+  align-items: start !important;
+  justify-content: start !important;
+  text-align: start !important;
+  padding-top: 10px;
+  flex-direction: column;
+  color: black;
+  font-size: 12px;
+}
 .prev-button,
 .next-button {
   padding: 10px;

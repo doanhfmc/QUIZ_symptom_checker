@@ -49,6 +49,9 @@
   padding-top: 50px;
   color: white;
 }
+.content-box:hover {
+  cursor: pointer;
+}
 .container1 {
   position: relative;
   width: 320px;

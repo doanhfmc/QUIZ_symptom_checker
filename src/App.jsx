@@ -13,28 +13,37 @@ import Result5 from "./Quiz_code/component/Result_Option1/Result5.jsx";
 import Result6 from "./Quiz_code/component/Result_Option1/Result6.jsx";
 import Question2 from "./Quiz_code/component/Question2.jsx";
 import ReactGA from "react-ga4";
+import Result1Op from "./Quiz_code/component/Result_Option2/Result1Op.jsx";
+import Result2Op from "./Quiz_code/component/Result_Option2/Result2Op.jsx";
+import Result3Op from "./Quiz_code/component/Result_Option2/Result3Op.jsx";
+import Result4Op from "./Quiz_code/component/Result_Option2/Result4Op.jsx";
 ReactGA.initialize("G-FXKNQKBJYX");
 const App = () => {
   return (
     <HashRouter>
-      <Layout />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/Option" element={<Optionquestion />} />
-        <Route
-          path="/skin"
-          element={<Question condition="skin" key={"skin"} />}
-        />
-        <Route
-          path="/intimate"
-          element={<Question2 condition="intimate" key={"intimate"} />}
-        />
-        <Route path="/result1" element={<Result />} />
-        <Route path="/result2" element={<Result2 />} />
-        <Route path="/result3" element={<Result3 />} />
-        <Route path="/result4" element={<Result4 />} />
-        <Route path="/result5" element={<Result5 />} />
-        <Route path="/result6" element={<Result6 />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="/Option" element={<Optionquestion />} />
+          <Route
+            path="/skin"
+            element={<Question condition="skin" key={"skin"} />}
+          />
+          <Route
+            path="/intimate"
+            element={<Question2 condition="intimate" key={"intimate"} />}
+          />
+          <Route path="/result1" element={<Result />} />
+          <Route path="/result2" element={<Result2 />} />
+          <Route path="/result3" element={<Result3 />} />
+          <Route path="/result4" element={<Result4 />} />
+          <Route path="/result5" element={<Result5 />} />
+          <Route path="/result6" element={<Result6 />} />
+          <Route path="/result1Op" element={<Result1Op />} />
+          <Route path="/result2Op" element={<Result2Op />} />
+          <Route path="/result3Op" element={<Result3Op />} />
+          <Route path="/result4Op" element={<Result4Op />} />
+        </Route>
       </Routes>
     </HashRouter>
   );

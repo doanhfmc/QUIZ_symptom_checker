@@ -5,6 +5,10 @@ import { questionsData } from "../Data.js";
 import "./Question.css";
 import { useBearStore } from "../store/app.js";
 import ReactGA from "react-ga4";
+import Next from "../../img/btn red.png";
+import DisabledNext from "../../img/btn.png";
+import Yes_sel from "../../img/03 _ Co.png";
+import No_sel from "../../img/03 _ Khong.png";
 function Question({ condition }) {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   // const [answers, setAnswers] = useState([]);
@@ -13,31 +17,31 @@ function Question({ condition }) {
 
   const [answersid, setAnswerid] = useState([]);
   const [type, setType] = useState("multi");
-  const { increasePopulation } = useBearStore();
+  const { increasePopulation, dataSelect } = useBearStore();
   const navigate = useNavigate();
-  //console.log(type);
+  console.log(dataSelect);
 
   const handleAnswer = (answer) => {
     switch (type) {
       case "multi":
-        if (answers_select.includes(answer.text)) {
+        if (answers_select.includes(answer._id)) {
           setAnswers_select(
-            answers_select.filter((item) => item !== answer.text)
+            answers_select.filter((item) => item !== answer._id)
           );
           setAnswerid(answer._id);
         } else {
-          setAnswers_select([...answers_select, answer.text]);
+          setAnswers_select([...answers_select, answer._id]);
           setAnswerid(answer._id);
         }
         break;
       case "single":
-        if (answers_select.includes(answer.text)) {
+        if (answers_select.includes(answer._id)) {
           setAnswers_select(
-            answers_select.filter((item) => item !== answer.text)
+            answers_select.filter((item) => item !== answer._id)
           );
           setAnswerid(null);
         } else {
-          setAnswers_select([answer.text]);
+          setAnswers_select([answer._id]);
           setAnswerid(answer._id);
         }
         break;
@@ -80,6 +84,8 @@ function Question({ condition }) {
     });
     setCurrentQuestion(currentQuestion + 1);
     setAnswers_select([]);
+    setAnswerid(null);
+
     switch (answersid) {
       case 20:
         break;
@@ -94,7 +100,7 @@ function Question({ condition }) {
         navigate("/result2");
         break;
       case 22:
-        navigate("/result1");
+        navigate("/result3");
         break;
       case 23:
         navigate("/result4");
@@ -109,7 +115,6 @@ function Question({ condition }) {
         break;
     }
   };
-  //console.log(question);
 
   return (
     <div>
@@ -120,66 +125,76 @@ function Question({ condition }) {
           setShowRef([]);
         }}
       >
-        <h3>{questionsData[condition][currentQuestion - 1]?.text_1}</h3>
-        <h2 className="question-option">
+        <p className="question">
+          {questionsData[condition][currentQuestion - 1]?.text_1}
+        </p>
+        <p className="question-option">
           {questionsData[condition][currentQuestion - 1]?.text}
-        </h2>
-        <h3>{questionsData[condition][currentQuestion - 1]?.type}</h3>
+        </p>
+        <p className="question-type">
+          {questionsData[condition][currentQuestion - 1]?.type}
+        </p>
         <div
           className={`option-container ${
-            question?.options.length === 4 ? "two-columns" : "three-columns"
+            question?.options.length === 6 ? "three-columns" : "two-columns"
           } `}
         >
           {questionsData[condition][currentQuestion - 1]?.options.map(
             (option, index) =>
               questionsData[condition][currentQuestion - 1]?.id !== 3 ? (
                 <button
-                  className={`container1 `}
+                  className={`${
+                    questionsData[condition][currentQuestion - 1]?.id !== 1
+                      ? "container1"
+                      : "container2"
+                  } `}
                   key={index}
                   onClick={() => handleAnswer(option)} // Thêm logic sự kiện click
                 >
                   <img
-                    className="circle-img"
+                    className={`${
+                      questionsData[condition][currentQuestion - 1]?.id !== 1
+                        ? "circle-img1"
+                        : "circle-img"
+                    } `}
                     src={option?.img}
                     alt={option?.text}
                   />
                   <div
                     className={` ${
-                      answers_select?.filter((item) => item === option?.text)
-                        ?.length !== 0
+                      questionsData[condition][currentQuestion - 1]?.id === 1
+                        ? answers_select?.includes(option?._id)
+                          ? "activeBG1"
+                          : "content-box1"
+                        : answers_select?.includes(option?._id)
                         ? "activeBG"
                         : "content-box"
                     }`}
                   >
-                    {option?.text}
+                    <div
+                      className={`${
+                        questionsData[condition][currentQuestion - 1]?.id === 2
+                          ? "Text_as"
+                          : ""
+                      } `}
+                      style={{}}
+                    >
+                      {option?.text}
+                    </div>
                     <div
                       style={{
                         display: "flex",
                         justifyContent: "flex-end",
                         alignItems: "start",
-                        gap: 5,
+
                         marginTop: 5,
+                        flexDirection: "column",
                         position: "relative",
-                        paddingRight: 40,
                       }}
                     >
-                      {showRef.filter((item) => item.id === option._id)[0]
-                        ?.show && (
-                        <p
-                          style={{
-                            borderTop: 2,
-                            borderStyle: "solid",
-                            borderBottom: "none",
-                            borderLeft: "none",
-                            borderRight: "none",
-                            borderColor: "gray",
-                          }}
-                        >
-                          {option?.desc}
-                        </p>
-                      )}
                       {option?.desc && (
                         <p
+                          style={{}}
                           onClick={(e) => {
                             e.stopPropagation();
 
@@ -193,44 +208,80 @@ function Question({ condition }) {
                               },
                             ]);
                           }}
+                          className={`${
+                            answers_select?.includes(option?._id)
+                              ? "Ref_sel"
+                              : "Ref"
+                          }`}
+                        >
+                          {showRef.filter((item) => item.id === option._id)[0]
+                            ?.show && (
+                            <span
+                              className={`${
+                                answers_select?.includes(option?._id)
+                                  ? "Line_sel"
+                                  : "Line"
+                              }`}
+                              style={{}}
+                            ></span>
+                          )}
+                          Nguồn tham khảo. &#11167;
+                        </p>
+                      )}
+                      {showRef.filter((item) => item.id === option._id)[0]
+                        ?.show && (
+                        <p
                           style={{
-                            position: "absolute",
-                            top: -8,
+                            fontSize: 12,
+                            position: "relative",
+                            top: 8,
                             right: 0,
+                            marginBottom: 10,
+                            height: 150,
                           }}
                         >
-                          Ref
+                          {option?.desc}
                         </p>
                       )}
                     </div>
                   </div>
                 </button>
               ) : (
-                <button
-                  className={` ${
-                    answers_select?.filter((item) => item === option?.text)
-                      ?.length !== 0
-                      ? "activeBG"
-                      : ""
-                  }`}
-                  key={index}
-                  onClick={() => handleAnswer(option)} // Thêm logic sự kiện click
-                  style={{
-                    borderRadius: "100%",
-                    height: 100,
-                    width: 100,
-                    marginTop: 30,
-                    paddingTop: 50,
-                  }}
-                >
-                  <div> {option?.text}</div>
-                </button>
+                <div className="Container_Q3">
+                  <img
+                    key={index}
+                    onClick={() => handleAnswer(option)}
+                    src={
+                      answersid === option._id && option._id === 30
+                        ? Yes_sel
+                        : answersid === option._id
+                        ? No_sel
+                        : option?.img
+                    }
+                    alt={option?.text}
+                  />
+                </div>
               )
           )}
+          <div></div>
+          {question?.options.length === 4 ||
+          question?.options.length === 2 ? null : (
+            <div></div>
+          )}
+
+          <div className="Next_1">
+            <button
+              className="Btn_Next"
+              onClick={nextPage}
+              disabled={answers_select.length === 0}
+            >
+              <img
+                src={answers_select.length === 0 ? DisabledNext : Next}
+                alt="Next Button"
+              />
+            </button>
+          </div>
         </div>
-        <button onClick={nextPage} disabled={answers_select.length === 0}>
-          NEXT
-        </button>
       </div>
     </div>
   );

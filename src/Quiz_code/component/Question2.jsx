@@ -55,7 +55,12 @@ function Question2({ condition }) {
 
   const nextPage = () => {
     increasePopulation({
+      //
+      questionId: question.id,
+      questionText: question.text,
+      questionDetail: question.text_1,
       [`answer${currentQuestion}`]: [...new Set(answersid)],
+      selectedAnswers2: [...new Set(answers_select)],
     });
     setCurrentQuestion(currentQuestion + 1);
     setAnswers_select([]);
@@ -66,46 +71,46 @@ function Question2({ condition }) {
       if (!dataSelect[3]?.answer3?.includes(36)) {
         if (
           dataSelect[4]?.answer4?.includes(40) &&
-          dataSelect[5]?.answer5?.includes(50)
+          dataSelect[5]?.answer5?.includes(53)
         ) {
-          navigate("/Result2");
+          navigate("/Result1Op");
           return;
         }
         if (
           dataSelect[4]?.answer4?.includes(41) &&
-          dataSelect[5]?.answer5?.includes(51)
+          dataSelect[5]?.answer5?.includes(50)
         ) {
-          navigate("/Result3");
+          navigate("/Result2Op");
           return;
         }
-        navigate("/Result1");
+        navigate("/Result4Op");
         return;
       } else {
         if (
           dataSelect[4]?.answer4?.includes(40) &&
-          dataSelect[5]?.answer5?.includes(50) &&
+          dataSelect[5]?.answer5?.includes(53) &&
           dataSelect.length === 9
         ) {
-          navigate("/Result6");
+          navigate("/Result4Op");
           return;
         }
         if (
           dataSelect[4]?.answer4?.includes(41) &&
-          dataSelect[5]?.answer5?.includes(51) &&
+          dataSelect[5]?.answer5?.includes(50) &&
           dataSelect.length === 9
         ) {
-          navigate("/Result7");
+          navigate("/Result4Op");
           return;
         }
       }
 
       if (!dataSelect[7]?.answer7?.includes(70) && dataSelect.length === 8) {
-        navigate("/Result4");
+        navigate("/Result4Op");
         return;
       }
     }
     if (dataSelect.length === 9) {
-      navigate("/Result5");
+      navigate("/Result3Op");
     }
   }, [dataSelect.length]);
 
@@ -127,16 +132,18 @@ function Question2({ condition }) {
                 key={index}
                 onClick={() => handleAnswer(option)} // Thêm logic sự kiện click
               >
-                <img
-                  src={option?.img}
-                  alt={option?.text}
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    marginRight: "10px",
-                    borderRadius: "5px",
-                  }}
-                />
+                {question.id !== 1 && question.id !== 2 && (
+                  <img
+                    src={option?.img}
+                    alt={option?.text}
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      marginRight: "10px",
+                      borderRadius: "5px",
+                    }}
+                  />
+                )}
                 <div
                   className={` ${
                     answers_select.filter((item) => item === option?.text)
@@ -146,13 +153,15 @@ function Question2({ condition }) {
                   }`}
                 >
                   {" "}
-                  {question.id !== 1 && option?.text}
+                  {option?.text}
                 </div>
               </button>
             )
           )}
         </div>
-        <button onClick={nextPage}>NEXT</button>
+        <button onClick={nextPage} disabled={answers_select.length === 0}>
+          NEXT
+        </button>
       </div>
     </div>
   );

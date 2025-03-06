@@ -1,13 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .symptom-checker {
-  max-width: 600px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -26,69 +17,70 @@ body {
 }
 
 .result {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border: 1px solid #ddd;
-  margin: 20px;
-  border-radius: 8px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 70px;
 }
-
-.result h2 {
-  color: #d32f2f;
+.section_rìght img {
+  width: 583px;
+  height: 377px;
 }
-
-.result img {
-  width: 100px;
-  height: 100px;
-  margin: 10px 0;
-  border-radius: 50%;
-  border: 1px solid #ddd;
-}
-
-.find-out-button {
-  padding: 10px 20px;
-  background-color: #d32f2f;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.find-out-button:hover {
-  background-color: #b71c1c;
+.section_left img {
+  width: 529px;
+  height: 108px;
+  gap: 30px;
 }
 
 .slider {
   margin: 20px 0px;
   padding: 20px;
-  background-color: #d32f2f;
+  background-color: #c01b31;
   color: white;
+  width: 100vw;
+  height: 963px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .slider-container {
-  display: flex;
-  align-items: center;
+  width: 60%;
   justify-content: center;
 }
-
+.slider-container_3 {
+  width: 80%;
+  justify-content: center;
+}
 .slide {
   text-align: center;
   margin: 0 10px;
-  color: #d32f2f;
+  color: var(--red-color);
   background-color: white;
-  margin-bottom: 5px;
+  /* min-width: 50%; */
+  width: 22.5vw !important;
+  height: 720px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
 }
 
 .slide img {
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 22.5vw;
+  height: 252px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide p {
+  padding-left: 20px;
 }
 .slide_desc {
   display: flex;
@@ -107,6 +99,20 @@ body {
   flex-direction: column;
   color: black;
   font-size: 12px;
+}
+.slick-slide {
+  padding: 0 15px !important; /* Khoảng cách giữa các slide */
+}
+.slick-arrow {
+  width: 60px !important;
+  height: 91px !important;
+  margin-top: -90px;
+}
+.slick-prev {
+  left: -120px !important;
+}
+.slick-next {
+  right: -120px !important;
 }
 .prev-button,
 .next-button {
@@ -161,14 +167,77 @@ body {
   margin-left: 10px;
   color: #555;
 }
+.Info {
+  height: 100px;
+}
+.Info img {
+  width: 46.875vw;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .Dropdown_result {
-  width: 100%;
-  max-width: 600px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
   margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+}
+
+.Dropdown_result1 p {
+  width: 60vw;
+  height: 90px;
+  margin: 0 auto;
+  font-size: 40px;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   overflow: hidden;
-  text-align: start !important;
+  text-align: center !important;
+  margin-bottom: 50px;
+}
+.Dropdown_result1 {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.expand_result {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.Dropdown_result1 img {
+  margin-left: 30px;
+  width: 35px;
+  height: 20px;
+}
+.Dropdown_result2 p {
+  width: 46.875vw;
+  height: 90px;
+  margin: 0 auto;
+  font-size: 40px;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+  text-align: center !important;
+  margin-bottom: 50px;
+}
+.Dropdown_result2 img {
+  margin-left: 30px;
+  width: 35px;
+  height: 20px;
+  transform: rotate(180deg);
 }
 .Dropdown_title {
   background-color: #b93b3b;

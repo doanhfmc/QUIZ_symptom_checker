@@ -1,8 +1,13 @@
 .question_2 {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+
   align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  /* position: fixed;
+  top: 50px;
+  left: 50px; */
 }
 
 .question_2 h3 {
@@ -11,17 +16,22 @@
 
 .option-container {
   display: grid;
-  gap: 80px; /* Khoảng cách giữa các ô */
+  gap: 80px;
   justify-content: center;
   align-items: center;
+
+  padding-top: 40px;
+  margin: 0 auto;
 }
 
 .two-columns {
   grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
+  width: 850px;
 }
 
 .three-columns {
   grid-template-columns: repeat(3, 1fr); /* 3 đáp án mỗi hàng */
+  width: 1250px;
 }
 
 .option {
@@ -39,58 +49,502 @@
 .option:hover {
   background-color: #f5f5f5;
 }
-.activeBG {
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
   border: 2px solid #d33;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: red;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: white;
   position: relative;
   margin-top: 30px;
-  padding-top: 50px;
+  min-height: 250px;
+  width: 400px;
+  font-size: 24px;
+  padding-top: 80px; /* Để có khoảng cách giữa ảnh và nội dung */
+}
+.activeBG {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  border: 2px solid #d33;
+  border-radius: 30px;
+  padding: 10px;
+  background: linear-gradient(145deg, rgb(160, 30, 20), rgb(230, 60, 50));
+  position: relative;
+  margin-top: 30px;
+  min-height: 250px;
+  width: 400px;
+  font-size: 24px;
+  padding-top: 80px;
   color: white;
+}
+.activeBG1 {
+  border: 2px solid #d33;
+  border-radius: 30px;
+  padding: 20px;
+  background: linear-gradient(120deg, #bb0900 0%, #ef3022 50%, #bb0900 100%);
+  position: relative;
+  margin-top: 30px;
+  width: 400px;
+  font-size: 24px;
+  min-height: 200px;
+  padding-top: 100px;
+  color: white;
+}
+.content-box1 {
+  border: 2px solid #d33;
+  border-radius: 30px;
+  font-size: 24px;
+  background-color: white;
+  position: relative;
+  margin-top: 30px;
+  width: 400px;
+  min-height: 200px;
+  padding-top: 100px; /* Để có khoảng cách giữa ảnh và nội dung */
+}
+.content-box3 {
+  border: none;
+  background-color: white;
+}
+
+.activeBG3 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/03\ _\ CoB.png");
 }
 .content-box:hover {
   cursor: pointer;
 }
 .container1 {
   position: relative;
-  width: 320px;
+  width: 300px;
+  text-align: start;
+  border: none;
+  background: white;
+}
+.container2 {
+  position: relative;
+  width: 250px;
   text-align: center;
   border: none;
   background: white;
 }
+.question {
+  color: var(--black-color);
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.question-type {
+  color: var(--black-color);
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
 .question-option {
-  color: rgb(177, 5, 5);
+  color: var(--red-color);
+  text-align: center;
+  width: 68vw;
+  font-size: 40px;
+  font-weight: bold;
+}
+.Text_as {
+  height: 110px;
 }
 .content-box:hover {
   cursor: pointer;
 }
-.content-box {
-  border: 2px solid #d33;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: white;
-  position: relative;
-  margin-top: 30px;
-  padding-top: 50px; /* Để có khoảng cách giữa ảnh và nội dung */
+.content-box1:hover {
+  cursor: pointer;
 }
 
 .circle-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 3px solid white; /* Tạo viền trắng để không bị mất viền hộp */
-  background-color: white;
+  width: 151px;
+  height: 151px;
+
   position: absolute;
-  top: -10px; /* Đưa hình tròn lên cao hơn */
-  left: 50%;
+  top: -38px; /* Đưa hình tròn lên cao hơn */
+  left: 78%;
   transform: translateX(-50%);
   z-index: 2; /* Đảm bảo ảnh luôn nằm trên viền hộp */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng để làm nổi bật */
 }
 
-.circle-img img {
+.circle-img1 {
+  width: 151px;
+  height: 151px;
+
+  position: absolute;
+  top: -38px; /* Đưa hình tròn lên cao hơn */
+  left: 66%;
+  transform: translateX(-50%);
+  z-index: 2; /* Đảm bảo ảnh luôn nằm trên viền hộp */
+}
+
+.Ref {
+  color: red;
+  display: flex;
+  justify-content: end;
+  display: flex;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+}
+.Ref_sel {
+  color: white;
+  display: flex;
+  justify-content: end;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+}
+.Line {
+  height: 2px;
+  margin-bottom: 5px;
+  background: var(--black-color);
+  flex: 1;
+}
+.Line_sel {
+  height: 2px;
+  margin-bottom: 5px;
+  background: var(--white-color);
+  flex: 1;
+}
+.Btn_Next {
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
+}
+.Btn_Next img {
+  width: 150px;
+  height: 48px;
+}
+
+.Btn_Next img:hover {
+  cursor: pointer;
+}
+.Next_1 {
+  display: flex;
+
+  justify-content: end;
+}
+/* Table */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .question_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    /* position: fixed;
+    top: 50px;
+    left: 50px; */
+  }
+
+  .question_2 h3 {
+    color: black;
+  }
+
+  .option-container {
+    display: grid;
+    gap: 80px; /* Khoảng cách giữa các ô */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .two-columns {
+    grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
+  }
+
+  .three-columns {
+    grid-template-columns: repeat(3, 1fr); /* 3 đáp án mỗi hàng */
+  }
+
+  .option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+
+  .option:hover {
+    background-color: #f5f5f5;
+  }
+  .activeBG {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: red;
+    position: relative;
+    margin-top: 30px;
+    min-height: 160px;
+    padding-top: 70px;
+    color: white;
+  }
+  .activeBG1 {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: red;
+    position: relative;
+    margin-top: 30px;
+    min-height: 100px;
+    padding-top: 75px;
+    color: white;
+  }
+  .content-box1 {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+
+    margin-top: 30px;
+    min-height: 100px;
+    padding-top: 75px; /* Để có khoảng cách giữa ảnh và nội dung */
+  }
+  .content-box:hover {
+    cursor: pointer;
+  }
+  .container1 {
+    position: relative;
+    width: 300px;
+    text-align: start;
+    border: none;
+    background: white;
+  }
+  .container2 {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    border: none;
+    background: white;
+  }
+  .question-option {
+    color: rgb(177, 5, 5);
+  }
+  .content-box:hover {
+    cursor: pointer;
+  }
+  .content-box1:hover {
+    cursor: pointer;
+  }
+  .content-box {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 10px;
+
+    background-color: white;
+    position: relative;
+    margin-top: 30px;
+    min-height: 160px;
+    padding-top: 70px; /* Để có khoảng cách giữa ảnh và nội dung */
+  }
+
+  .circle-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white; /* Tạo viền trắng để không bị mất viền hộp */
+    background-color: white;
+    position: absolute;
+    top: -10px; /* Đưa hình tròn lên cao hơn */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Đảm bảo ảnh luôn nằm trên viền hộp */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng để làm nổi bật */
+  }
+
+  .circle-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .Ref {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    color: red;
+  }
+  .Ref_sel {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    color: white;
+  }
+}
+/* 💻 Responsive cho tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+/* 📱 Responsive cho Mobile */
+@media (max-width: 768px) {
+  .question_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    /* position: fixed;
+  top: 50px;
+  left: 50px; */
+  }
+
+  .question_2 h3 {
+    color: black;
+  }
+
+  .option-container {
+    position: relative;
+    display: flex;
+    gap: 5px; /* Khoảng cách giữa các ô */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .two-columns {
+    grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
+  }
+
+  .three-columns {
+    grid-template-columns: repeat(3, 1fr); /* 3 đáp án mỗi hàng */
+  }
+
+  .option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+
+  .option:hover {
+    background-color: #f5f5f5;
+  }
+  .activeBG {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: red;
+    position: relative;
+    margin-top: 30px;
+    min-height: 160px;
+    padding-top: 70px;
+    color: white;
+  }
+  .activeBG1 {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: red;
+    position: relative;
+    display: flex;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    color: white;
+  }
+  .content-box1 {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    /* Để có khoảng cách giữa ảnh và nội dung */
+  }
+  .content-box:hover {
+    cursor: pointer;
+  }
+  .container1 {
+    position: relative;
+    width: 300px;
+    text-align: start;
+    border: none;
+    background: white;
+  }
+  .container2 {
+    position: relative;
+    width: 250px;
+    text-align: center;
+
+    border: none;
+    background: white;
+  }
+  .question-option {
+    color: rgb(177, 5, 5);
+  }
+  .content-box:hover {
+    cursor: pointer;
+  }
+  .content-box1:hover {
+    cursor: pointer;
+  }
+  .content-box {
+    border: 2px solid #d33;
+    border-radius: 12px;
+    padding: 10px;
+
+    background-color: white;
+    position: relative;
+    margin-top: 30px;
+    min-height: 160px;
+    padding-top: 70px; /* Để có khoảng cách giữa ảnh và nội dung */
+  }
+
+  .circle-img {
+    width: 100px;
+    height: 100px;
+
+    border: 3px solid white; /* Tạo viền trắng để không bị mất viền hộp */
+    background-color: white;
+    position: absolute;
+    top: 30px; /* Đưa hình tròn lên cao hơn */
+    left: 0%;
+    transform: translateX(-50%);
+    z-index: 2; /* Đảm bảo ảnh luôn nằm trên viền hộp */
+  }
+
+  .circle-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .Ref {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    color: red;
+  }
+  .Ref_sel {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    color: white;
+  }
+  .Btn_Next {
+    position: absolute;
+    right: 135px;
+    bottom: 130px;
+  }
 }

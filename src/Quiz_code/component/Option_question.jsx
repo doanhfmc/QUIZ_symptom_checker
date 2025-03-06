@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import img2 from "../../img/1.6.jpeg";
+import img1 from "../../img/0 thumb 1.png";
+import img2 from "../../img/0 thumb 2.png";
 import "./Option_question.css";
 import { useBearStore } from "../store/app";
+import footer from "../../img/footer curve-PC-crop.png";
 const Option_question = () => {
   const { increasePopulation } = useBearStore();
 
@@ -13,31 +15,72 @@ const Option_question = () => {
     navigate(`/${condition}`);
   };
   return (
-    <div className="quesiton_1">
-      <div>
-        <h1 className="title-container">WHAT IS YOUR CONDITION RELATED TO?</h1>
-        <div className="card-container">
-          <div
-            className="card-wrapper"
-            onClick={() => handleConditionSelect("skin")}
-          >
-            <div className="card-background-left"></div>
-            <div className="card">
-              <img src={img2} alt="Skin & Foot Health" />
-              <p> Skin fungus</p>
-            </div>
+    <div
+      className="quesiton_1"
+      style={{
+        flex: 1,
+
+        display: "flex",
+      }}
+    >
+      <div
+        className="container_qs1"
+        style={{
+          flex: 1,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "absolute",
+            bottom: "40%",
+          }}
+        >
+          <div>
+            <p className="title-container">
+              Tình trạng của bạn liên quan đến vấn đề gì?
+            </p>
           </div>
-          <div
-            className="card-wrapper"
-            onClick={() => handleConditionSelect("intimate")}
-          >
-            <div className="card-background-right"></div>
-            <div className="card">
-              <img src={img2} alt="Women's Intimate Health" />
-              <p> Gynecological intections</p>
+          <div className="card-container">
+            <div
+              className="card-wrapper"
+              onClick={() => handleConditionSelect("skin")}
+            >
+              <div className="card-background-left"></div>
+              <div className="card">
+                <img src={img1} alt="Skin & Foot Health" />
+                <p>
+                  {" "}
+                  <strong> Nấm da </strong>
+                </p>
+              </div>
+            </div>
+            <div
+              className="card-wrapper"
+              onClick={() => handleConditionSelect("intimate")}
+            >
+              <div className="card-background-right"></div>
+              <div className="card">
+                <img src={img2} alt="Women's Intimate Health" />
+                <p>
+                  <strong>Viêm nhiễm phụ khoa</strong>{" "}
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <img
+          src={footer}
+          alt=""
+          className="img_footer"
+          style={{
+            objectFit: "contain",
+            width: "100%",
+          }}
+        />
       </div>
     </div>
   );

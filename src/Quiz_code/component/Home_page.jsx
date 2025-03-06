@@ -1,41 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import "./Home_page.css";
+import start from "../../img/btn Start.png";
 const Home_page = () => {
   const navigate = useNavigate();
   return (
     <div className="">
       <div className="Container">
-        <>
-          <div className="header_first">
-            <p>Symptom Checker</p>
-          </div>
+        <div className="container_all">
+          <div className="header_first"></div>
           <div className="footer_first">
             <div className="footer_first_content">
               <p>
-                Welcome to your personal Canesten® Symptom Checker <br />
-                <br />
-                Experiencing itching, discomfort and soreness? Wondering what it
-                might be, or just want some information and treatment options?
-                <br />
-                <br />
-                The Canesten® Symptom Checker will help you better understand
-                your symptoms and help guide you on a treatment to help get you
-                back to you.
+                Chào mừng bạn đến với{" "}
+                <strong>Công Cụ Kiểm Tra Triệu Chứng</strong>. Bạn đang cảm thấy
+                ngứa ngáy, khó chịu hay đau rát? Bạn băn khoăn không biết nguyên
+                nhân do đâu, hoặc cần thêm thông tin về các lựa chọn điều trị?
                 <br />
                 <br />
-                If you are under 18 or over 60, it is recommended you speak to
-                your healthcare professional before continuing.
+                <strong>Công Cụ Kiểm Tra Triệu Chứng</strong> sẽ giúp bạn nhận
+                diện tình trạng của mình và đưa ra gợi ý phù hợp, để bạn lấy lại
+                sự thoải mái vốn có. <br /> <br />
+                Nếu bạn dưới 18 tuổi hoặc trên 60 tuổi, hãy trao đổi với nhân
+                viên y tế trước khi tiếp tục sử dụng công cụ này.
                 <br />
                 <br />
               </p>
             </div>
             <div className="footer_first_button">
-              <button
-                onClick={() => navigate("/Option")}
-              >{`LET'S GET STARTED`}</button>
+              <img src={start} alt="" onClick={() => navigate("/Option")}></img>
             </div>
           </div>
-        </>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,8 @@ import Next from "../../img/btn red.png";
 import DisabledNext from "../../img/btn.png";
 import Yes_sel from "../../img/03 _ Co.png";
 import No_sel from "../../img/03 _ Khong.png";
+import arrow from "../../img/Button_img/mui ten.png";
+
 function Question({ condition }) {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   // const [answers, setAnswers] = useState([]);
@@ -125,15 +127,17 @@ function Question({ condition }) {
           setShowRef([]);
         }}
       >
-        <p className="question">
-          {questionsData[condition][currentQuestion - 1]?.text_1}
-        </p>
-        <p className="question-option">
-          {questionsData[condition][currentQuestion - 1]?.text}
-        </p>
-        <p className="question-type">
-          {questionsData[condition][currentQuestion - 1]?.type}
-        </p>
+        <div className="question_title">
+          <p className="question">
+            {questionsData[condition][currentQuestion - 1]?.text_1}
+          </p>
+          <p className="question-option">
+            {questionsData[condition][currentQuestion - 1]?.text}
+          </p>
+          <p className="question-type">
+            {questionsData[condition][currentQuestion - 1]?.type}
+          </p>
+        </div>
         <div
           className={`option-container ${
             question?.options.length === 6 ? "three-columns" : "two-columns"
@@ -175,7 +179,7 @@ function Question({ condition }) {
                       className={`${
                         questionsData[condition][currentQuestion - 1]?.id === 2
                           ? "Text_as"
-                          : ""
+                          : "Text1"
                       } `}
                       style={{}}
                     >
@@ -225,19 +229,19 @@ function Question({ condition }) {
                               style={{}}
                             ></span>
                           )}
-                          Nguồn tham khảo. &#11167;
+                          Nguồn tham khảo <img src={arrow} alt="" />{" "}
                         </p>
                       )}
                       {showRef.filter((item) => item.id === option._id)[0]
                         ?.show && (
                         <p
+                          className="show_desc"
                           style={{
                             fontSize: 12,
                             position: "relative",
                             top: 8,
                             right: 0,
                             marginBottom: 10,
-                            height: 150,
                           }}
                         >
                           {option?.desc}
@@ -247,19 +251,21 @@ function Question({ condition }) {
                   </div>
                 </button>
               ) : (
-                <div className="Container_Q3">
-                  <img
-                    key={index}
-                    onClick={() => handleAnswer(option)}
-                    src={
-                      answersid === option._id && option._id === 30
-                        ? Yes_sel
-                        : answersid === option._id
-                        ? No_sel
-                        : option?.img
-                    }
-                    alt={option?.text}
-                  />
+                <div className="Q3">
+                  <div className="Container_Q3">
+                    <img
+                      key={index}
+                      onClick={() => handleAnswer(option)}
+                      src={
+                        answersid === option._id && option._id === 30
+                          ? Yes_sel
+                          : answersid === option._id
+                          ? No_sel
+                          : option?.img
+                      }
+                      alt={option?.text}
+                    />
+                  </div>
                 </div>
               )
           )}
@@ -268,19 +274,18 @@ function Question({ condition }) {
           question?.options.length === 2 ? null : (
             <div></div>
           )}
-
-          <div className="Next_1">
-            <button
-              className="Btn_Next"
-              onClick={nextPage}
-              disabled={answers_select.length === 0}
-            >
-              <img
-                src={answers_select.length === 0 ? DisabledNext : Next}
-                alt="Next Button"
-              />
-            </button>
-          </div>
+        </div>
+        <div className="Next_1">
+          <button
+            className="Btn_Next"
+            onClick={nextPage}
+            disabled={answers_select.length === 0}
+          >
+            <img
+              src={answers_select.length === 0 ? DisabledNext : Next}
+              alt="Next Button"
+            />
+          </button>
         </div>
       </div>
     </div>

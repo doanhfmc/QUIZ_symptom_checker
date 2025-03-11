@@ -17,11 +17,12 @@ import { questionsData } from "../../Data.js";
 
 const sliderData = [
   {
-    title: <p style={{ width: "20vw" }}>Bệnh viêm da nếp kẽ</p>,
+    title: <p className="Title6">Bệnh viêm da nếp kẽ</p>,
     description: (
       <ul
         style={{
           margin: "20px",
+          textAlign: "justify",
         }}
       >
         <li>
@@ -31,7 +32,7 @@ const sliderData = [
           đường, Người cao tuổi
           <sup style={{ fontSize: 12 }}>12,13</sup>{" "}
         </li>
-        <li>
+        <li style={{ paddingTop: "4px" }}>
           Bệnh Viêm da nếp kẽ do vi khuẩn có thể lan sang các vùng da khác trên
           cơ thể nếu không được điều trị<sup style={{ fontSize: 12 }}>13</sup>.
         </li>
@@ -55,13 +56,13 @@ const sliderData = [
   },
   {
     title: (
-      <p style={{ width: "19.5vw" }}>
+      <p className="Title6">
         Cách phòng ngừa bệnh Viêm da nếp kẽ{" "}
         <sup style={{ fontSize: 12 }}>13</sup>
       </p>
     ),
     description: (
-      <ul style={{ margin: "20px" }}>
+      <ul style={{ margin: "20px", textAlign: "justify" }}>
         <li>Tập thể dục thường xuyên và duy trì cân nặng hợp lý.</li>
         <li>Mặc quần áo thoáng mát, chất liệu cotton.</li>
         <li>Giữ vệ sinh cá nhân sạch sẽ.</li>
@@ -119,6 +120,17 @@ function Result6() {
     arrows: true, // ✅ Hiển thị nút điều hướng mặc định
     prevArrow: <img className="prev-button" src={Arrow_prev} alt="Prev" />,
     nextArrow: <img className="next-button" src={Arrow_next} alt="Next" />,
+    responsive: [
+      {
+        breakpoint: 768, // 📱 Khi màn hình nhỏ hơn 768px (mobile)
+        settings: {
+          slidesToShow: 1, // ❗ Hiển thị 1 slide
+          slidesToScroll: 1,
+          arrows: true, // Ẩn nút điều hướng trên mobile nếu cần
+          dots: true, // Hiển thị chấm tròn để chuyển slide
+        },
+      },
+    ],
   };
   return (
     <div className="symptom-checker">
@@ -130,27 +142,8 @@ function Result6() {
         </div>
         <div className="section_left">
           {" "}
-          <p
-            style={{
-              color: "#010101",
-              fontSize: 30,
-              fontWeight: 500,
-              marginBottom: 30,
-            }}
-          >
-            Có thể bạn đang gặp bệnh
-          </p>
-          <p
-            style={{
-              color: "#172bc1",
-              fontSize: 45,
-              fontWeight: 900,
-              marginBottom: 30,
-              width: 535,
-            }}
-          >
-            VIÊM DA NẾP KẼ DO VI KHUẨN
-          </p>
+          <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
+          <p className="sick">VIÊM DA NẾP KẼ DO VI KHUẨN</p>
           <a href="#" target="blank">
             <img src={Btn_Sol} alt="" />{" "}
           </a>
@@ -159,17 +152,8 @@ function Result6() {
 
       {/* Slider Section */}
       <section className="slider">
-        <p style={{ fontSize: 45, marginTop: 20, fontWeight: 500 }}>
-          BẠN CÓ BIẾT?
-        </p>
-        <p
-          style={{
-            fontSize: 40,
-            fontWeight: 200,
-            marginTop: 20,
-            marginBottom: 60,
-          }}
-        ></p>
+        <p className="content_1">BẠN CÓ BIẾT?</p>
+        <p className="content_2"></p>
 
         {/* <img
             className="prev-button"
@@ -185,10 +169,7 @@ function Result6() {
                 <p style={{ fontSize: 24, fontWeight: 600, marginTop: 20 }}>
                   {slide.title}
                 </p>
-                <p
-                  style={{ fontSize: 24, fontWeight: 300, width: "23vw" }}
-                  className="slide_desc"
-                >
+                <p style={{ fontWeight: 300 }} className="slide_desc">
                   {slide.description}
                 </p>
                 <p
@@ -249,50 +230,14 @@ function Result6() {
                       padding: "0",
                     }}
                   >
-                    <div
-                      style={{
-                        backgroundColor: "#fff",
-                        paddingTop: "20px",
-                        paddingBottom: 20,
-                        borderRadius: "0",
-                        borderBottomLeftRadius: 20,
-                        borderBottomRightRadius: 20,
-                      }}
-                    >
-                      <p
-                        style={{
-                          fontWeight: "bold",
-                          color: "#010101",
-                          fontSize: 40,
-                          paddingLeft: "15px",
-                          marginBottom: "10px",
-                        }}
-                      >
+                    <div className="Drop_As">
+                      <p className="Queston_Drop" style={{}}>
                         Câu hỏi {index + 1}:{" "}
                       </p>
-                      <p
-                        style={{
-                          fontWeight: "bold",
-                          color: "#172bc1",
-                          fontSize: 40,
-                          paddingLeft: "15px",
-                          marginBottom: "10px",
-                        }}
-                      >
+                      <p className="Queston_Drop_Title" style={{}}>
                         {item.questionText || "Không có dữ liệu"}
                       </p>
-                      <div
-                        style={{
-                          backgroundColor: "#e6e6e6",
-                          padding: "15px",
-                          display: "flex",
-
-                          fontWeight: "bold",
-                          fontSize: 40,
-                          color: "#010101",
-                          width: "100%",
-                        }}
-                      >
+                      <div className="Answer_Drop" style={{}}>
                         <span style={{ fontWeight: "normal" }}>
                           <strong>Bạn trả lời: </strong>
                           {index !== 1 &&

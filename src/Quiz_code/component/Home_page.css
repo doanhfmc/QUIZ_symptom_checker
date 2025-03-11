@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center !important;
   margin: 50px auto;
-  color: white;
+  color: var(--white-color);
   height: 69vh;
   width: 70vw;
 }
@@ -21,8 +21,10 @@
 }
 .header_first {
   flex: 50%;
-
-  background-image: url("../../img//1.6.jpeg");
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background-image: url("./../../img/homepage-Final.png");
   background-repeat: no-repeat;
   background-position: center;
   object-fit: contain;
@@ -48,8 +50,6 @@
 .footer_first button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: white;
-  color: #c01b31;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -57,9 +57,59 @@
   transition: background-color 0.3s;
   font-size: 20px;
 }
-.footer_first button:hover {
-  background-color: rgb(238, 230, 230); /* Màu sáng hơn khi hover */
-}
+
 .footer_first_button:hover {
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
+    margin: 50px auto;
+    color: var(--white-color);
+    height: 100dvh;
+    width: 70vw;
+  }
+
+  .app h1 {
+    margin-left: 50px;
+    color: #d32f2f;
+  }
+  .container_all {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 1000px;
+  }
+  .header_first {
+  }
+  .footer_first {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #c01b31;
+    font-weight: 400;
+    text-align: justify;
+    gap: 50px;
+  }
+  .footer_first button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+  }
+
+  .footer_first_button:hover {
+    cursor: pointer;
+  }
 }

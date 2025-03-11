@@ -29,16 +29,7 @@ const Option_question = () => {
           flex: 1,
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "absolute",
-            bottom: "40%",
-          }}
-        >
+        <div className="center-container" style={{}}>
           <div>
             <p className="title-container">
               Tình trạng của bạn liên quan đến vấn đề gì?
@@ -49,7 +40,6 @@ const Option_question = () => {
               className="card-wrapper"
               onClick={() => handleConditionSelect("skin")}
             >
-              <div className="card-background-left"></div>
               <div className="card">
                 <img src={img1} alt="Skin & Foot Health" />
                 <p>
@@ -62,7 +52,6 @@ const Option_question = () => {
               className="card-wrapper"
               onClick={() => handleConditionSelect("intimate")}
             >
-              <div className="card-background-right"></div>
               <div className="card">
                 <img src={img2} alt="Women's Intimate Health" />
                 <p>
@@ -78,7 +67,7 @@ const Option_question = () => {
           className="img_footer"
           style={{
             objectFit: "contain",
-            width: "100%",
+            width: "100vw",
           }}
         />
       </div>

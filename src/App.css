@@ -26,3 +26,9 @@ body {
   --black-color: #010101; /* Màu hover */
   --white-color: #ececec; /* Màu viền */
 }
+sup {
+  font-size: 12px;
+}
+ul {
+  text-align: justify;
+}

@@ -1,0 +1,132 @@
+.background_question2 {
+  display: flex;
+  justify-content: center;
+}
+.question2_2 {
+  width: 80vw;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  font-size: 40px;
+
+  /* position: fixed;
+    top: 50px;
+    left: 50px; */
+}
+.number_question {
+  font-size: 40px;
+  font-weight: 400;
+  margin-left: 40px;
+}
+.title_question2 {
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  margin-bottom: 40px;
+  color: var(--white-color);
+  background-image: url(../../img/Gyne/Top\ Desk\ 1290x280.png);
+  width: 100%;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-size: cover;
+}
+.option_question {
+  text-align: center;
+}
+.type_question {
+  width: 70vw;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  align-items: end;
+  text-align: end;
+  justify-content: end;
+  margin-bottom: 40px;
+  color: var(--white-color);
+}
+.option-container2 {
+  padding-top: 40px;
+  margin: 0 auto;
+}
+.two2-columns {
+  grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
+  width: 850px;
+  display: grid;
+  gap: 80px;
+  justify-content: center;
+}
+
+.three2-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
+  gap: 80px; /* Khoảng cách giữa các item */
+  justify-content: center; /* Căn giữa toàn bộ container */
+}
+/* .three2-columns > *:nth-last-child(2):nth-child(n + 4) {
+  grid-column: span 2; 
+  align-items: center;
+} */
+.option2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.img_red {
+  background-image: url(../../img/Gyne/Icon\ Red.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+.img_blue {
+  background-image: url(../../img/Gyne/Icon\ Blue.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+.text2_as {
+  width: 300px;
+  text-align: center;
+  color: var(--blue-color);
+  text-shadow: -1px 0.8px 0px red;
+  font-size: 24px;
+  font-weight: bold;
+}
+.Next_2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.disclaimer_footer {
+  text-align: center;
+  width: 65vw;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin-bottom: 40px;
+  color: var(--white-color);
+}

@@ -22,27 +22,22 @@ const App = () => {
   return (
     <HashRouter>
       <Routes>
+        {/* Trang chính là /cong-cu-kiem-tra-trieu-chung */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
-          <Route path="/Option" element={<Optionquestion />} />
-          <Route
-            path="/skin"
-            element={<Question condition="skin" key={"skin"} />}
-          />
-          <Route
-            path="/intimate"
-            element={<Question2 condition="intimate" key={"intimate"} />}
-          />
-          <Route path="/result1" element={<Result />} />
-          <Route path="/result2" element={<Result2 />} />
-          <Route path="/result3" element={<Result3 />} />
-          <Route path="/result4" element={<Result4 />} />
-          <Route path="/result5" element={<Result5 />} />
-          <Route path="/result6" element={<Result6 />} />
-          <Route path="/result1Op" element={<Result1Op />} />
-          <Route path="/result2Op" element={<Result2Op />} />
-          <Route path="/result3Op" element={<Result3Op />} />
-          <Route path="/result4Op" element={<Result4Op />} />
+          <Route path="Option" element={<Optionquestion />} />
+          <Route path="skin" element={<Question condition="skin" />} />
+          <Route path="intimate" element={<Question2 condition="intimate" />} />
+          <Route path="result1" element={<Result />} />
+          <Route path="result2" element={<Result2 />} />
+          <Route path="result3" element={<Result3 />} />
+          <Route path="result4" element={<Result4 />} />
+          <Route path="result5" element={<Result5 />} />
+          <Route path="result6" element={<Result6 />} />
+          <Route path="result1Op" element={<Result1Op />} />
+          <Route path="result2Op" element={<Result2Op />} />
+          <Route path="result3Op" element={<Result3Op />} />
+          <Route path="result4Op" element={<Result4Op />} />
         </Route>
       </Routes>
     </HashRouter>

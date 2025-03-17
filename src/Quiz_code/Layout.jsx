@@ -5,7 +5,7 @@ import "./Layout.css";
 const Layout = () => {
   const { increasePopulation } = useBearStore();
   const location = useLocation(); // ✅ Dùng useLocation thay vì location trực tiếp
-  const id = location.pathname.split("/")[1];
+  const id = location.pathname.split("/").pop();
 
   useEffect(() => {
     if (id === "skin" || id === "intimate") {
@@ -61,16 +61,22 @@ const Layout = () => {
           <p>
             Công cụ này cung cấp thông tin để bạn tham khảo và nhận diện tình
             trạng sức khỏe của mình, đồng thời đưa ra gợi ý về phương pháp phù
-            hợp.
+            hợp. Tuy nhiên, công cụ này không thay thế cho lời khuyên, chẩn đoán
+            hoặc điều trị y tế chuyên môn.
           </p>
 
           <p className="highlight_text">
             <strong>
-              Tuy nhiên, chúng tôi khuyến nghị bạn nên tham khảo ý kiến của nhân
-              viên y tế để đảm bảo chẩn đoán chính xác và điều trị hiệu quả.
+              Chúng tôi khuyến nghị bạn nên tham khảo ý kiến của nhân viên y tế
+              để đảm bảo chẩn đoán chính xác và điều trị hiệu quả.
             </strong>
           </p>
-
+          <p>
+            <strong>
+              NẾU BẠN ĐANG MANG THAI HOẶC NGHI NGỜ MÌNH ĐANG MANG THAI, VUI LÒNG
+              THAM KHẢO Ý KIẾN BÁC SĨ.
+            </strong>
+          </p>
           <p>
             Vì độ chính xác trong việc nhận diện triệu chứng là ưu tiên hàng
             đầu, công cụ sử dụng hình ảnh thực tế. Chúng tôi hiểu rằng một số

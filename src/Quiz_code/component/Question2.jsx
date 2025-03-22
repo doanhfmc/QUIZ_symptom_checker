@@ -7,31 +7,46 @@ import Next from "../../img/Gyne/Tiep tuc xanh.png";
 import DisabledNext from "../../img/Gyne/Tiep tuc xam.png";
 import "./Question2.css";
 import Yes_sel from "../../img/03 _ Co.png";
-import No_sel from "../../img/03 _ Khong.png";
+import No_sel from "../../img/Gyne/Top Desk 1290x280.png";
 function Question2({ condition }) {
+  const { increasePopulation, dataSelect } = useBearStore();
   const [currentQuestion, setCurrentQuestion] = useState(1);
+  const question = questionsData[condition][currentQuestion - 1];
   // const [answers, setAnswers] = useState([]);
   const [answers_select, setAnswers_select] = useState([]);
   const [answersid, setAnswerid] = useState([]);
 
   const [type, setType] = useState("single");
-  const { increasePopulation, dataSelect } = useBearStore();
+
   const navigate = useNavigate();
   console.log(dataSelect);
-
-  const question = questionsData[condition][currentQuestion - 1];
   useEffect(() => {
+    setAnswers_select(
+      dataSelect?.length + 1 > question?.id
+        ? dataSelect[question?.id]?.selectedAnswers2 || []
+        : []
+    );
+  }, [question?.id]);
+  console.log(answers_select);
+  useEffect(() => {
+    if (answersid.includes(10) || answersid.includes(83)) {
+      setAnswers_select([answers_select[answers_select.length - 1]]);
+      setType("single");
+      return;
+    } else {
+      setType("multi");
+    }
     if (question?.id === 1 || question?.id === 8) {
       setType("multi");
     } else setType("single");
-  }, [question?.id]);
+  }, [question?.id, answersid.length]);
 
   const handleAnswer = (answer) => {
     switch (type) {
       case "multi":
         if (answers_select.includes(answer.text)) {
           setAnswers_select(
-            answers_select.filter((item) => item !== answer.text)
+            answers_select?.filter((item) => item !== answer.text)
           );
           setAnswerid(answersid.filter((item) => item !== answer._id));
         } else {
@@ -42,7 +57,7 @@ function Question2({ condition }) {
       case "single":
         if (answers_select.includes(answer.text)) {
           setAnswers_select(
-            answers_select.filter((item) => item !== answer.text)
+            answers_select?.filter((item) => item !== answer.text)
           );
           setAnswerid([]);
         } else {
@@ -122,6 +137,7 @@ function Question2({ condition }) {
       navigate("/Result4Op");
     }
   }, [dataSelect.length]);
+
   const columnClass =
     question?.options.length === 4
       ? "two2-columns"
@@ -134,22 +150,40 @@ function Question2({ condition }) {
     <div className="background_question2">
       <div className="question2_2">
         <div className="title_question2">
-          <p className="number_question">
-            {questionsData[condition][currentQuestion - 1]?.text_1}
-          </p>
-          <div className="center_q">
-            {" "}
-            <p className="option_question">
-              {questionsData[condition][currentQuestion - 1]?.text}
+          <img src={No_sel} alt="" />
+          <div
+            style={{
+              position: "absolute",
+            }}
+          >
+            <p className="number_question">
+              {questionsData[condition][currentQuestion - 1]?.text_1}
+            </p>
+            <div className="center_q">
+              {" "}
+              <p className="option_question">
+                {questionsData[condition][currentQuestion - 1]?.text}
+              </p>
+            </div>
+
+            <p className="type_question">
+              {questionsData[condition][currentQuestion - 1]?.type}
             </p>
           </div>
-
-          <p className="type_question">
-            {questionsData[condition][currentQuestion - 1]?.type}
-          </p>
         </div>
-        <div></div>
-        <div className={`option-container2 ${columnClass} `}>
+
+        <div
+          className={`option-container2  ${question?.id === 8 && columnClass}`}
+          style={
+            question?.id !== 8
+              ? {
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }
+              : {}
+          }
+        >
           {questionsData[condition][currentQuestion - 1]?.options.map(
             (option, index) =>
               questionsData[condition][currentQuestion - 1]?.id !== 5 &&
@@ -159,7 +193,7 @@ function Question2({ condition }) {
                   <div>
                     <div
                       className={` ${
-                        answers_select.filter((item) => item === option?.text)
+                        answers_select?.filter((item) => item === option?.text)
                           ?.length !== 0
                           ? "img_red"
                           : "img_blue"
@@ -185,8 +219,9 @@ function Question2({ condition }) {
                     <div>
                       <div
                         className={` ${
-                          answers_select.filter((item) => item === option?.text)
-                            ?.length !== 0
+                          answers_select?.filter(
+                            (item) => item === option?.text
+                          )?.length !== 0
                             ? "img_red"
                             : "img_blue"
                         }`}
@@ -224,10 +259,10 @@ function Question2({ condition }) {
             <button
               className="Btn_Next"
               onClick={nextPage}
-              disabled={answers_select.length === 0}
+              disabled={answers_select?.length === 0}
             >
               <img
-                src={answers_select.length === 0 ? DisabledNext : Next}
+                src={answers_select?.length === 0 ? DisabledNext : Next}
                 alt="Next Button"
               />
             </button>

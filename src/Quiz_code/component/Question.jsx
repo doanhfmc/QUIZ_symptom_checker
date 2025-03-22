@@ -16,13 +16,19 @@ function Question({ condition }) {
   // const [answers, setAnswers] = useState([]);
   const [answers_select, setAnswers_select] = useState([]);
   const [showRef, setShowRef] = useState([]);
-
+  const question = questionsData[condition][currentQuestion - 1];
   const [answersid, setAnswerid] = useState([]);
   const [type, setType] = useState("multi");
   const { increasePopulation, dataSelect } = useBearStore();
   const navigate = useNavigate();
   console.log(dataSelect);
-
+  useEffect(() => {
+    setAnswers_select(
+      dataSelect?.length + 1 > question?.id
+        ? dataSelect[question?.id]?.selectedAnswers || []
+        : []
+    );
+  }, [question?.id]);
   const handleAnswer = (answer) => {
     switch (type) {
       case "multi":
@@ -55,7 +61,6 @@ function Question({ condition }) {
     // setAnswers([...answers, answer]);
   };
 
-  const question = questionsData[condition][currentQuestion - 1];
   useEffect(() => {
     if (answersid === 10) {
       setAnswers_select([answers_select[answers_select.length - 1]]);
@@ -230,7 +235,19 @@ function Question({ condition }) {
                               style={{}}
                             ></span>
                           )}
-                          Nguồn tham khảo <img src={arrow} alt="" />{" "}
+                          Nguồn tham khảo
+                          {!showRef.filter((item) => item.id === option._id)[0]
+                            ?.show ? (
+                            <img src={arrow} alt="" />
+                          ) : (
+                            <img
+                              src={arrow}
+                              alt=""
+                              style={{
+                                transform: "unset",
+                              }}
+                            />
+                          )}
                         </p>
                       )}
                       {showRef.filter((item) => item.id === option._id)[0]

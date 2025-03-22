@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useBearStore } from "../../store/app.js";
 import "./ResultOp.css";
-import img from "../../../img/Gyne/thumb viem am dao 960x560.png";
+
+import img from "../../../img/Gyne/thumb khong co trieu chung.png";
 import arrow from "../../../img/Button_img/mui ten.png";
 
 const Result4Op = () => {
@@ -68,13 +69,14 @@ const Result4Op = () => {
                       }}
                     >
                       <div className="Drop_As" style={{}}>
-                        <span className="Queston_Drop" style={{}}>
-                          Câu hỏi {index + 1}:
+                        <div className="question_Drop">
+                          <span className="Queston_Drop" style={{}}>
+                            Câu hỏi {index + 1}:{" "}
+                          </span>
                           <span className="Queston_Drop_Title" style={{}}>
                             {item.questionText || "Không có dữ liệu"}
                           </span>
-                        </span>
-
+                        </div>
                         <div className="Answer_Drop" style={{}}>
                           <span style={{ fontWeight: "normal" }}>
                             <strong>Bạn trả lời: </strong>

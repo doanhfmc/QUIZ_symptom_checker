@@ -228,11 +228,12 @@ function Result3() {
           )}
         </div>
         <div
+          className="Xem_KQ"
           style={{
             backgroundColor: "#fff",
             padding: "0",
             maxHeight: isOpen ? "1200px" : "0",
-            marginBottom: 60,
+
             transition: "max-height 1.5s ease",
           }}
         >
@@ -248,12 +249,14 @@ function Result3() {
                     }}
                   >
                     <div className="Drop_As">
-                      <p className="Queston_Drop" style={{}}>
-                        Câu hỏi {index + 1}:{" "}
-                      </p>
-                      <p className="Queston_Drop_Title" style={{}}>
-                        {item.questionText || "Không có dữ liệu"}
-                      </p>
+                      <div className="question_Drop">
+                        <span className="Queston_Drop" style={{}}>
+                          Câu hỏi {index + 1}:{" "}
+                        </span>
+                        <span className="Queston_Drop_Title" style={{}}>
+                          {item.questionText || "Không có dữ liệu"}
+                        </span>
+                      </div>
                       <div className="Answer_Drop" style={{}}>
                         <span style={{ fontWeight: "normal" }}>
                           <strong>Bạn trả lời: </strong>

@@ -179,15 +179,15 @@
 .Queston_Drop {
   font-weight: bold;
   color: #010101;
-  font-size: 36px;
+  font-size: 24px;
   padding-left: 15px;
   margin-bottom: 10px;
 }
 .Queston_Drop_Title {
   font-weight: bold;
   color: #172bc1;
-  font-size: 36px;
-  padding-left: 15px;
+  font-size: 24px;
+
   margin-bottom: 10px;
 }
 .Answer_Drop {
@@ -195,7 +195,7 @@
   padding: 15px;
   display: flex;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 24px;
   color: #010101;
   width: 100%;
 }
@@ -315,7 +315,14 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
+.Xem_KQ {
+  margin-bottom: 60px;
+}
+.question_Drop {
+  text-align: justify;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
 @media (max-width: 768px) {
   .result {
     display: flex;
@@ -360,15 +367,15 @@
     height: 780px;
   }
   .slick-arrow {
-    width: 25px !important;
-    height: 40px !important;
+    width: 15px !important;
+    height: 25px !important;
     margin-top: -90px;
   }
   .slick-prev {
-    left: -30px !important;
+    left: -20px !important;
   }
   .slick-next {
-    right: -30px !important;
+    right: -20px !important;
   }
   .slide {
     width: 70vw !important;
@@ -420,14 +427,14 @@
     font-weight: bold;
     color: #010101;
     font-size: 18px;
-    padding-left: 15px;
+    padding-left: 0px;
     margin-bottom: 2px;
   }
   .Queston_Drop_Title {
     font-weight: bold;
     color: #172bc1;
     font-size: 18px;
-    padding-left: 15px;
+    padding-left: 0px;
     margin-bottom: 10px;
   }
   .Answer_Drop {
@@ -447,11 +454,17 @@
   }
   .Info {
     width: 70vw;
+    height: 89px;
   }
   .Dropdown_result1 p {
     width: 70vw;
     height: 60px;
     font-size: 20px;
+  }
+  .Dropdown_result1 img {
+    width: 20px;
+    height: 13px;
+    margin-top: -2px;
   }
   .Dropdown_result2 {
     width: 70vw;
@@ -460,5 +473,18 @@
     width: 70vw;
     height: 60px;
     font-size: 20px;
+  }
+  .Dropdown_result2 img {
+    width: 20px;
+    height: 13px;
+  }
+  .Xem_KQ {
+    margin-bottom: -10px;
+  }
+  .question_Drop {
+    margin-left: 15px;
+    text-align: justify;
+    padding-right: 15px;
+    padding-bottom: 10px;
   }
 }

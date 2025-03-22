@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between; /* Dàn đều nội dung */
   align-items: center;
+  margin-top: 10dvh;
   /* Chiều cao ít nhất bằng màn hình */
   background-color: #ffffff;
 }
@@ -105,6 +106,7 @@
     align-items: center;
     /* Chiều cao ít nhất bằng màn hình */
     background-color: #ffffff;
+    margin-top: auto;
   }
   .center-container {
     display: flex;
@@ -132,7 +134,7 @@
     font-size: 30px !important;
     font-weight: bold;
     color: #a11212;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 350px;
     height: 90px;
   }

@@ -38,7 +38,9 @@
   grid-template-columns: repeat(3, 1fr); /* 3 đáp án mỗi hàng */
   width: 1250px;
 }
-
+.one-columns {
+  grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
+}
 .option {
   padding: 10px;
   border: 1px solid #ccc;
@@ -282,6 +284,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
   }
   .question {
     font-size: 24px;
@@ -305,8 +308,13 @@
   }
   .two-columns {
     grid-template-columns: none;
+    margin-left: 25px;
   }
   .three-columns {
+    grid-template-columns: none;
+    margin-left: 12vw;
+  }
+  .one-columns {
     grid-template-columns: none;
   }
   .container2 {
@@ -409,7 +417,7 @@
     margin-right: 50px;
   }
   .show_desc {
-    height: 95px;
+    height: auto;
   }
   .show_desc p {
     font-size: 8px;

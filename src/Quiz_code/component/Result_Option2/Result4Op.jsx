@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useBearStore } from "../../store/app.js";
 import "./ResultOp.css";
-
+import CTA from "../../../img/Gyne/CTA 2.png";
 import img from "../../../img/Gyne/thumb khong co trieu chung.png";
 import arrow from "../../../img/Button_img/mui ten.png";
 
@@ -21,27 +21,29 @@ const Result4Op = () => {
           </div>
           <div className="text_result_container">
             {" "}
-            <p className="text_result">
-              Triệu chứng của bạn không giống với 2 loại viêm âm đạo phổ biến
-              nhất
-            </p>
-            <p className="text2_result">
-              Viêm âm đạo do vi khuẩn và nhiễm nấm âm đạo
-            </p>
-            <img src="" alt="" />
+            <span className="text_result">
+              Triệu chứng của bạn{" "}
+              <span style={{ color: "var(--red-color)" }}>không giống</span> với
+              2 loại viêm âm đạo phổ biến nhất
+            </span>
+            <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
+            <p className="text3_result">VIÊM NẤM ÂM ĐẠO</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={CTA} alt="" />
+            </a>
           </div>
         </div>
 
-        <div className="Dropdown_result">
-          <div onClick={toggleDropdown} className="Info">
+        <div className="Dropdown_result_total">
+          <div onClick={toggleDropdown} className="Info1">
             {isOpen ? (
-              <div className="Dropdown_result1">
+              <div className="Dropdown_result3">
                 <p style={{ background: "#172bc1" }}>
                   XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
                 </p>
               </div>
             ) : (
-              <div className="Dropdown_result2">
+              <div className="Dropdown_result4">
                 <p style={{ background: "#172bc1" }}>
                   XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
                 </p>
@@ -53,8 +55,10 @@ const Result4Op = () => {
               backgroundColor: "#fff",
               padding: "0",
               maxHeight: isOpen ? "1200px" : "0",
-              marginBottom: 60,
+              marginBottom: 40,
               transition: "max-height 1.5s ease",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
             }}
           >
             {isOpen && (
@@ -68,16 +72,16 @@ const Result4Op = () => {
                         padding: "0",
                       }}
                     >
-                      <div className="Drop_As" style={{}}>
+                      <div className="Drop_As" style={{ paddingTop: 10 }}>
                         <div className="question_Drop">
                           <span className="Queston_Drop" style={{}}>
                             Câu hỏi {index + 1}:{" "}
                           </span>
-                          <span className="Queston_Drop_Title" style={{}}>
+                          <span className="Queston_Drop_Title2" style={{}}>
                             {item.questionText || "Không có dữ liệu"}
                           </span>
                         </div>
-                        <div className="Answer_Drop" style={{}}>
+                        <div className="Answer_Drop2" style={{}}>
                           <span style={{ fontWeight: "normal" }}>
                             <strong>Bạn trả lời: </strong>
                             {item.selectedAnswers2.join(",") ||

@@ -11,6 +11,32 @@ import img24 from "../img/Q02_Trieuchung 5.png";
 import img25 from "../img/Q02_Trieuchung 6.png";
 import img30 from "../img/03 _ CoB.png";
 import img31 from "../img/03 _ KhongB.png";
+import img210 from "../img/Gyne/Q3 - Binh thuong.png";
+import img211 from "../img/Gyne/Q3 - Nong rat.png";
+import img212 from "../img/Gyne/Q3 -Ngua.png";
+import img213 from "../img/Gyne/Q3 - Cham Chich.png";
+import img214 from "../img/Gyne/Q3 - Dau nhuc.png";
+import img215 from "../img/Gyne/Q3 - Tieu buot.png";
+import img216 from "../img/Gyne/Q3 Kich ung.png";
+import img217 from "../img/Gyne/Q3 - Dau.png";
+import img220 from "../img/Gyne/Q4 Khong co mui.png";
+import img221 from "../img/Gyne/Q4 Mui tanh ca.png";
+import img222 from "../img/Gyne/Q4 Mui hoi.png";
+import img230 from "../img/Gyne/Q6 Ko co thay doi.png";
+import img231 from "../img/Gyne/Q6 Dich nhieu hon.png";
+import img232 from "../img/Gyne/Q6 Dich it hon.png";
+import img240 from "../img/Gyne/Q5 - Trong loang.png";
+import img241 from "../img/Gyne/Q5 Vang nhat loang.png";
+import img242 from "../img/Gyne/Q5 Trang xam loang.png";
+import img243 from "../img/Gyne/Q5 Dac von cuc.png";
+import img244 from "../img/Gyne/Q5 Co Mu Sui bot.png";
+import img245 from "../img/Gyne/Q5 Do nau von cuc.png";
+import YesQ2 from "../img/Gyne/Icon Co.png";
+import NoQ2 from "../img/Gyne/icon Khong.png";
+import img280 from "../img/Gyne/Q8 Nuoc tieu duc.png";
+import img281 from "../img/Gyne/Q8 co mau trong nuoc tieu.png";
+import img282 from "../img/Gyne/Q8 co mui hoi la.png";
+import img283 from "../img/Gyne/Q8 Nuoc tieu binh thuong.png";
 
 export const questionsData = {
   skin: [
@@ -214,21 +240,23 @@ export const questionsData = {
       text: "Bạn đang gặp phải triệu chứng nào ở vùng kín?",
       type: "Chọn nhiều đáp án nếu có",
       options: [
-        { _id: 10, text: "Không có cảm giác bất thường", img: img },
-        { _id: 11, text: "Ngứa", img: img },
-        { _id: 12, text: "Đau nhức", img: img },
-        { _id: 13, text: "Kích ứng", img: img },
-        { _id: 14, text: "Nóng rát", img: img },
-        { _id: 15, text: "Cảm giác châm chích", img: img },
+        { _id: 10, text: "Không có cảm giác bất thường", img: img210 },
+        { _id: 11, text: "Ngứa", img: img211 },
+        { _id: 12, text: "Đau nhức", img: img212 },
+        { _id: 13, text: "Kích ứng", img: img213 },
+        { _id: 14, text: "Nóng rát", img: img214 },
+        { _id: 15, text: "Cảm giác châm chích", img: img215 },
         {
           _id: 16,
-          text: "Tiểu buốt (Đau hoặc nóng rát khi đi tiểu)",
-          img: img,
+          text: "Tiểu buốt ",
+          img: img216,
+          ref: "(Đau hoặc nóng rát khi đi tiểu)",
         },
         {
           _id: 17,
-          text: "Đau khi quan hệ (Đau trong hoặc sau khi quan hệ tình dục)",
-          img: img,
+          text: "Đau khi quan hệ",
+          img: img217,
+          ref: "(Đau trong hoặc sau khi quan hệ tình dục)",
         },
       ],
     },
@@ -238,9 +266,9 @@ export const questionsData = {
       text: "Theo cảm nhận của bạn, mùi dịch âm đạo của bạn như thế nào? ",
       type: "Chỉ chọn một đáp án",
       options: [
-        { _id: 20, text: "Không có mùi", img: img },
-        { _id: 21, text: "Mùi tanh cá", img: img },
-        { _id: 22, text: "Mùi hôi", img: img },
+        { _id: 20, text: "Không có mùi", img: img220 },
+        { _id: 21, text: "Mùi tanh cá", img: img221 },
+        { _id: 22, text: "Mùi hôi", img: img222 },
       ],
     },
 
@@ -250,9 +278,9 @@ export const questionsData = {
       text: "Bạn có nhận thấy sự thay đổi về lượng dịch âm đạo (không tính máu kinh nguyệt) so với trước đây không? ",
       type: "Chỉ chọn một đáp án",
       options: [
-        { _id: 30, text: "Không có thay đổi về lượng dịch", img: img },
-        { _id: 31, text: "Dịch âm đạo nhiều hơn", img: img },
-        { _id: 32, text: "Dịch âm đạo ít hơn", img: img },
+        { _id: 30, text: "Không có thay đổi về lượng dịch", img: img230 },
+        { _id: 31, text: "Dịch âm đạo nhiều hơn", img: img231 },
+        { _id: 32, text: "Dịch âm đạo ít hơn", img: img232 },
       ],
     },
     {
@@ -261,19 +289,20 @@ export const questionsData = {
       text: "Dựa vào quan sát của bạn, dịch âm đạo giống với hình ảnh nào nhất?",
       type: "Chỉ chọn một đáp án",
       options: [
-        { _id: 40, text: "Trong, loãng hoặc trắng", img: img },
-        { _id: 41, text: "Vàng nhạt, loãng", img: img },
-        { _id: 42, text: "Trắng xám, loãng", img: img },
+        { _id: 40, text: "Trong, loãng hoặc trắng", img: img240 },
+        { _id: 41, text: "Vàng nhạt, loãng", img: img241 },
+        { _id: 42, text: "Trắng xám, loãng", img: img242 },
         {
           _id: 43,
           text: "Đặc, vón cục, màu trắng đục đến vàng nhạt",
-          img: img,
+          img: img243,
         },
-        { _id: 44, text: "Có mủ, sủi bọt, màu vàng xanh", img: img },
+        { _id: 44, text: "Có mủ, sủi bọt, màu vàng xanh", img: img244 },
         {
           _id: 45,
-          text: "Đỏ nâu vón cục (không phải trong kỳ kinh nguyệt)",
-          img: img,
+          text: "Đỏ nâu vón cục",
+          img: img245,
+          ref: "(không phải trong kỳ kinh nguyệt)",
         },
       ],
     },
@@ -283,8 +312,8 @@ export const questionsData = {
       text: " Bạn có bị sốt không? ",
       type: "Chỉ chọn một đáp án",
       options: [
-        { _id: 50, text: "Có", img: img },
-        { _id: 51, text: "Không", img: img },
+        { _id: 50, text: "Có", img: YesQ2 },
+        { _id: 51, text: "Không", img: NoQ2 },
       ],
     },
     {
@@ -293,8 +322,8 @@ export const questionsData = {
       text: "Bạn có cảm thấy đau ở vùng bụng dưới không? ",
       type: "Chỉ chọn một đáp án",
       options: [
-        { _id: 60, text: "Có", img: img },
-        { _id: 61, text: "Không", img: img },
+        { _id: 60, text: "Có", img: YesQ2 },
+        { _id: 61, text: "Không", img: NoQ2 },
       ],
     },
 
@@ -304,8 +333,8 @@ export const questionsData = {
       text: "Bạn có đi tiểu nhiều lần hơn bình thường không?  ",
       type: "Chỉ chọn một đáp án",
       options: [
-        { _id: 70, text: "Có", img: img },
-        { _id: 71, text: "Không", img: img },
+        { _id: 70, text: "Có", img: YesQ2 },
+        { _id: 71, text: "Không", img: NoQ2 },
       ],
     },
     {
@@ -314,10 +343,10 @@ export const questionsData = {
       text: "Nước tiểu của bạn có kèm theo triệu chứng nào dưới đây không? ",
       type: "Chọn nhiều đáp án nếu có",
       options: [
-        { _id: 80, text: "Nước tiểu đục", img: img },
-        { _id: 81, text: "Có máu trong nước tiểu", img: img },
-        { _id: 82, text: "Nước tiểu có mùi hôi lạ", img: img },
-        { _id: 83, text: "Không có triệu chứng bất thường", img: img },
+        { _id: 80, text: "Nước tiểu đục", img: img280 },
+        { _id: 81, text: "Có máu trong nước tiểu", img: img281 },
+        { _id: 82, text: "Nước tiểu có mùi hôi lạ", img: img282 },
+        { _id: 83, text: "Không có triệu chứng bất thường", img: img283 },
       ],
     },
   ],

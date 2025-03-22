@@ -117,7 +117,12 @@ function Question({ condition }) {
         break;
     }
   };
-
+  const columnClass =
+    question?.options.length === 6
+      ? "three-columns"
+      : question?.options.length === 4
+      ? "two-columns"
+      : "one-columns";
   return (
     <div>
       <div
@@ -138,11 +143,7 @@ function Question({ condition }) {
             {questionsData[condition][currentQuestion - 1]?.type}
           </p>
         </div>
-        <div
-          className={`option-container ${
-            question?.options.length === 6 ? "three-columns" : "two-columns"
-          } `}
-        >
+        <div className={`option-container ${columnClass} `}>
           {questionsData[condition][currentQuestion - 1]?.options.map(
             (option, index) =>
               questionsData[condition][currentQuestion - 1]?.id !== 3 ? (

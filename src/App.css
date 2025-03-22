@@ -20,11 +20,14 @@ body {
   box-sizing: border-box;
 }
 :root {
-  --gray-color: #424448; /* Màu chính */
-  --red-color: #c01b31; /* Màu nền phụ */
-  --blue-color: #172bc1; /* Màu chữ */
-  --black-color: #010101; /* Màu hover */
-  --white-color: #ececec; /* Màu viền */
+  --gray-color: #424448;
+  --red-color: #c01b31;
+  --blue-color: #172bc1;
+  --black-color: #010101;
+  --white-color: #ececec;
+  --green-color: #00867c;
+  --pink-color: #eb569f;
+  --app-pink-color: #ffc9e5;
 }
 sup {
   font-size: 12px;

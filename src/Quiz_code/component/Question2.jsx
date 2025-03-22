@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { questionsData } from "../Data.js";
 import "./Question.css";
 import { useBearStore } from "../store/app.js";
-import Next from "../../img/btn red.png";
-import DisabledNext from "../../img/btn.png";
+import Next from "../../img/Gyne/Tiep tuc xanh.png";
+import DisabledNext from "../../img/Gyne/Tiep tuc xam.png";
 import "./Question2.css";
 import Yes_sel from "../../img/03 _ Co.png";
 import No_sel from "../../img/03 _ Khong.png";
@@ -84,7 +84,7 @@ function Question2({ condition }) {
         }
         if (
           dataSelect[2]?.answer2?.includes(21) &&
-          dataSelect[4]?.answer4?.includes(40)
+          dataSelect[4]?.answer4?.includes(42)
         ) {
           navigate("/Result2Op");
           return;
@@ -102,7 +102,7 @@ function Question2({ condition }) {
         }
         if (
           dataSelect[2]?.answer2?.includes(21) &&
-          dataSelect[4]?.answer4?.includes(40) &&
+          dataSelect[4]?.answer4?.includes(42) &&
           dataSelect.length === 9
         ) {
           navigate("/Result4Op");
@@ -122,7 +122,14 @@ function Question2({ condition }) {
       navigate("/Result4Op");
     }
   }, [dataSelect.length]);
-
+  const columnClass =
+    question?.options.length === 4
+      ? "two2-columns"
+      : question?.options.length === 3
+      ? "four-columns"
+      : question?.options.length === 2
+      ? "one2-columns"
+      : "three2-columns";
   return (
     <div className="background_question2">
       <div className="question2_2">
@@ -130,64 +137,68 @@ function Question2({ condition }) {
           <p className="number_question">
             {questionsData[condition][currentQuestion - 1]?.text_1}
           </p>
-          <p className="option_question">
-            {questionsData[condition][currentQuestion - 1]?.text}
-          </p>
+          <div className="center_q">
+            {" "}
+            <p className="option_question">
+              {questionsData[condition][currentQuestion - 1]?.text}
+            </p>
+          </div>
+
           <p className="type_question">
             {questionsData[condition][currentQuestion - 1]?.type}
           </p>
         </div>
-        <div
-          className={`option-container2 ${
-            question?.options.length === 4 ? "two2-columns" : "three2-columns"
-          } `}
-        >
+        <div></div>
+        <div className={`option-container2 ${columnClass} `}>
           {questionsData[condition][currentQuestion - 1]?.options.map(
             (option, index) =>
               questionsData[condition][currentQuestion - 1]?.id !== 5 &&
               questionsData[condition][currentQuestion - 1]?.id !== 6 &&
               questionsData[condition][currentQuestion - 1]?.id !== 7 ? (
-                <div className="option2">
-                  <div
-                    className={` ${
-                      answers_select.filter((item) => item === option?.text)
-                        ?.length !== 0
-                        ? "img_red"
-                        : "img_blue"
-                    }`}
-                  >
+                <div className="option2" onClick={() => handleAnswer(option)}>
+                  <div>
+                    <div
+                      className={` ${
+                        answers_select.filter((item) => item === option?.text)
+                          ?.length !== 0
+                          ? "img_red"
+                          : "img_blue"
+                      }`}
+                    ></div>
                     {/* {question.id !== 5 && question.id !== 2 && ( */}
                     <img
-                      className="img_as"
+                      className="img_as2"
                       key={index}
-                      onClick={() => handleAnswer(option)}
                       src={option?.img}
                       alt={option?.text}
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        marginRight: "10px",
-                        borderRadius: "5px",
-                      }}
                     />
                   </div>
                   <div className="text2_as">{option?.text}</div>
+                  <div className="ref2_as">{option?.ref}</div>
                 </div>
               ) : (
                 <div className="Q3">
-                  <div className="Container_Q3">
-                    <img
-                      key={index}
-                      onClick={() => handleAnswer(option)}
-                      src={
-                        answersid === option._id && option._id === 50
-                          ? Yes_sel
-                          : answersid === option._id
-                          ? No_sel
-                          : option?.img
-                      }
-                      alt={option?.text}
-                    />
+                  <div
+                    className="Container_Q3 "
+                    onClick={() => handleAnswer(option)}
+                  >
+                    <div>
+                      <div
+                        className={` ${
+                          answers_select.filter((item) => item === option?.text)
+                            ?.length !== 0
+                            ? "img_red"
+                            : "img_blue"
+                        }`}
+                      ></div>
+                      {/* {question.id !== 5 && question.id !== 2 && ( */}
+                      <img
+                        className="img_as2"
+                        key={index}
+                        src={option?.img}
+                        alt={option?.text}
+                      />
+                    </div>
                   </div>
                 </div>
               )
@@ -209,16 +220,18 @@ function Question2({ condition }) {
               Nasir R et al. Europasian J Med Sci 2023;5(1):1-10
             </p>
           </div>
-          <button
-            className="Btn_Next"
-            onClick={nextPage}
-            disabled={answers_select.length === 0}
-          >
-            <img
-              src={answers_select.length === 0 ? DisabledNext : Next}
-              alt="Next Button"
-            />
-          </button>
+          <div>
+            <button
+              className="Btn_Next"
+              onClick={nextPage}
+              disabled={answers_select.length === 0}
+            >
+              <img
+                src={answers_select.length === 0 ? DisabledNext : Next}
+                alt="Next Button"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>

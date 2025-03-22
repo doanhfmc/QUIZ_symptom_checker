@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useBearStore } from "../../store/app.js";
-import "../Result_Option1/Result_1.css";
-import img from "../../../img/1.jpg";
+import "./ResultOp.css";
+import CTA from "../../../img/Gyne/CTA 1.png";
+import img from "../../../img/Gyne/thumb viem tiet nieu.png";
+import arrow from "../../../img/Button_img/mui ten.png";
+
 const Result3Op = () => {
   const dataSelect = useBearStore((state) => state.dataSelect);
   const [isOpen, setIsOpen] = useState(false);
@@ -10,132 +13,95 @@ const Result3Op = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div
-      style={{
-        backgroundColor: "#FFD9EC",
-        padding: "20px",
-        borderRadius: "20px",
-        maxWidth: "400px",
-        margin: "0 auto",
-        textAlign: "center",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: "#FFF",
-          borderRadius: "15px",
-          overflow: "hidden",
-          padding: "10px",
-        }}
-      >
-        <img
-          src={img}
-          alt="Uterus Illustration"
-          style={{ width: "100%", borderRadius: "15px" }}
-        />
-        <h3 style={{ color: "#333", marginTop: "15px" }}>
-          Dựa trên triệu chứng bạn mô tả, bạn có thể đang bị
-        </h3>
-        <h1
-          style={{
-            color: "#0000FF",
-            fontWeight: "bold",
-            fontSize: "24px",
-          }}
-        >
-          Nhiễm trùng đường tiểu
-        </h1>
-        <button
-          style={{
-            backgroundColor: "#D62828",
-            color: "#FFF",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            border: "none",
-            fontWeight: "bold",
-            fontSize: "16px",
-            marginTop: "15px",
-            cursor: "pointer",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          Tìm hiểu về nguyên nhân và cách điều trị
-        </button>
-      </div>
-
-      <div className="Dropdown_result">
-        <div onClick={toggleDropdown} className="Dropdown_title">
-          YOUR INFORMATION <span>{isOpen ? "▲" : "▼"}</span>
+    <div className="background_Result">
+      <div className="Result_container">
+        <div className="Sick_result">
+          <div className="img_result">
+            <img className="" src={img} alt="Uterus Illustration" />
+          </div>
+          <div className="text_result_container">
+            {" "}
+            <span className="text_result_123">
+              Dựa trên triệu chứng bạn mô tả, bạn có thể đang bị{" "}
+            </span>
+            <p className="text3_result1">NHIỄM TRÙNG NƯỚC TIỂU</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={CTA} alt="" />
+            </a>
+          </div>
         </div>
-        <div
-          style={{
-            backgroundColor: "#fff",
-            padding: "0",
-            maxHeight: isOpen ? "1000px" : "0",
-            overflow: "hidden",
-            transition: "max-height 1.5s ease",
-          }}
-        >
-          {isOpen && (
-            <div>
-              {dataSelect && dataSelect.length > 1 ? (
-                dataSelect.slice(1).map((item, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      borderBottom: "1px solid #e0e0e0",
-                      padding: "0",
-                      backgroundColor: "#f5f5f5",
-                    }}
-                  >
+
+        <div className="Dropdown_result_total">
+          <div onClick={toggleDropdown} className="Info1">
+            {isOpen ? (
+              <div className="Dropdown_result3">
+                <p style={{ background: "#172bc1" }}>
+                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                </p>
+              </div>
+            ) : (
+              <div className="Dropdown_result4">
+                <p style={{ background: "#172bc1" }}>
+                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                </p>
+              </div>
+            )}
+          </div>
+          <div
+            style={{
+              backgroundColor: "#fff",
+              padding: "0",
+              maxHeight: isOpen ? "1200px" : "0",
+              marginBottom: 40,
+              transition: "max-height 1.5s ease",
+              borderBottomLeftRadius: 20,
+              borderBottomRightRadius: 20,
+            }}
+          >
+            {isOpen && (
+              <div className="expand_result">
+                {dataSelect && dataSelect.length > 1 ? (
+                  dataSelect.slice(1).map((item, index) => (
                     <div
+                      key={index}
                       style={{
-                        backgroundColor: "#fff",
-                        padding: "20px",
-                        borderRadius: "0",
+                        borderBottom: "1px solid #e0e0e0",
+                        padding: "0",
                       }}
                     >
-                      <p
-                        style={{
-                          fontWeight: "bold",
-                          color: "#b93b3b",
-                          marginBottom: "10px",
-                        }}
-                      >
-                        Câu hỏi {index + 1}:{" "}
-                        {item.questionText || "Không có dữ liệu"}
-                      </p>
-                      <div
-                        style={{
-                          backgroundColor: "#e6e6e6",
-                          padding: "15px",
-                          borderRadius: "5px",
-                          display: "block",
-                          fontWeight: "bold",
-                          color: "#333",
-                          width: "100%",
-                        }}
-                      >
-                        <span style={{ fontWeight: "bold" }}>
-                          Đáp án của bạn:
-                        </span>
-                        <span
-                          style={{ fontWeight: "normal", marginLeft: "10px" }}
-                        >
-                          {item.selectedAnswers2.join(", ")}
-                        </span>
+                      <div className="Drop_As" style={{ paddingTop: 10 }}>
+                        <div className="question_Drop">
+                          <span className="Queston_Drop" style={{}}>
+                            Câu hỏi {index + 1}:{" "}
+                          </span>
+                          <span className="Queston_Drop_Title2" style={{}}>
+                            {item.questionText || "Không có dữ liệu"}
+                          </span>
+                        </div>
+                        <div className="Answer_Drop2" style={{}}>
+                          <span style={{ fontWeight: "normal" }}>
+                            <strong>Bạn trả lời: </strong>
+                            {item.selectedAnswers2.join(",") ||
+                              "Chưa chọn đáp án"}
+
+                            {/* {questionsData.skin
+                            .filter((item_) => item_.id === index + 1)[0]
+                            .options.filter(
+                              (op) => op._id === item.selectedAnswers.join(",")
+                            )[0]?.text || "Chưa chọn đáp án"} */}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))
-              ) : (
-                <p style={{ textAlign: "center", padding: "20px" }}>
-                  Không có dữ liệu để hiển thị.
-                </p>
-              )}
-            </div>
-          )}
+                  ))
+                ) : (
+                  <p style={{ textAlign: "center", padding: "20px" }}>
+                    Không có dữ liệu để hiển thị.
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

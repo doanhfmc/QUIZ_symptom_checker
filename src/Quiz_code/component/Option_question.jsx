@@ -4,7 +4,7 @@ import img1 from "../../img/0 thumb 1.png";
 import img2 from "../../img/0 thumb 2.png";
 import "./Option_question.css";
 import { useBearStore } from "../store/app";
-import footer from "../../img/footer curve-PC-crop.png";
+import footer from "../../img/Button_img/footer curve-PC-crop.png";
 const Option_question = () => {
   const { increasePopulation } = useBearStore();
 

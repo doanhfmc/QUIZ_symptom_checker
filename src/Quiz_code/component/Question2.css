@@ -11,7 +11,7 @@
   align-items: stretch;
   justify-content: space-between;
   font-size: 40px;
-  /* background-color: white; */
+  background-color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-bottom: 80px;
@@ -33,7 +33,7 @@
   flex-direction: column;
   /* background-image: url(""); */
   width: 100%;
-  background-color: white;
+
   /* height: 280px; */
   /* background-repeat: no-repeat; */
   /* background-position: center;
@@ -48,13 +48,10 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  background-image: url("../../img//Gyne/Bot\ Desk\ 1290x280\ 1.png");
-  padding-top: 20px;
+  background-image: url("../../img//Gyne/Top+Bot/bot\ MO\ 960x248.png");
+
   width: 100%;
-  height: 280px;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: contain;
+
   background-size: cover;
 }
 .center_q {
@@ -84,37 +81,28 @@
   margin: 0 auto;
   background-color: white;
 }
-.two2-columns {
+.two-column2 {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 150px;
+
+  justify-content: center;
+}
+.two_column1 {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 40px;
+  justify-content: center;
+}
+.three_column1 {
   grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
-  width: 850px;
+
   display: grid;
   gap: 80px;
   justify-content: center;
 }
 
-.three2-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
-  gap: 80px; /* Khoảng cách giữa các item */
-  justify-content: center; /* Căn giữa toàn bộ container */
-}
-.four-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
-  gap: 80px; /* Khoảng cách giữa các item */
-  justify-content: center; /* Căn giữa toàn bộ container */
-}
-.one2-columns {
-  grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
-  width: 850px;
-  display: grid;
-  gap: 80px;
-  justify-content: center;
-}
-/* .three2-columns > *:nth-last-child(2):nth-child(n + 4) {
-  grid-column: span 2; 
-  align-items: center;
-} */
 .option2 {
   align-items: center;
   display: flex;
@@ -198,7 +186,7 @@
   }
   .title_question2 {
     font-size: 24px;
-    background-image: url("../../img/Gyne/top\ MO\ 980x400.png");
+    background-image: url("../../img/Gyne/Top+Bot/Top\ Desk\ 1280x270.png");
     height: auto;
     margin: 0px;
   }

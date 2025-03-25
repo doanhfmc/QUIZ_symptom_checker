@@ -7,7 +7,7 @@ import Next from "../../img/Gyne/Tiep tuc xanh.png";
 import DisabledNext from "../../img/Gyne/Tiep tuc xam.png";
 import "./Question2.css";
 import Yes_sel from "../../img/03 _ Co.png";
-import No_sel from "../../img/Gyne/Top Desk 1290x280.png";
+import Top from "../../img/Gyne/Top+Bot/Top Desk 1280x270.png";
 function Question2({ condition }) {
   const { increasePopulation, dataSelect } = useBearStore();
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -84,7 +84,7 @@ function Question2({ condition }) {
     });
     setCurrentQuestion(currentQuestion + 1);
     setAnswers_select([]);
-    console.log(answersid);
+    console.log(question?.id);
   };
 
   useEffect(() => {
@@ -139,18 +139,16 @@ function Question2({ condition }) {
   }, [dataSelect.length]);
 
   const columnClass =
-    question?.options.length === 4
-      ? "two2-columns"
-      : question?.options.length === 3
-      ? "four-columns"
-      : question?.options.length === 2
-      ? "one2-columns"
-      : "three2-columns";
+    question?.id === 8
+      ? "three_column1"
+      : question?.id === 5 || question?.id === 6 || question?.id === 7
+      ? "two-column2"
+      : "two_column1";
   return (
     <div className="background_question2">
       <div className="question2_2">
         <div className="title_question2">
-          <img src={No_sel} alt="" />
+          <img src={Top} alt="" />
           <div
             style={{
               position: "absolute",
@@ -173,16 +171,8 @@ function Question2({ condition }) {
         </div>
 
         <div
-          className={`option-container2  ${question?.id === 8 && columnClass}`}
-          style={
-            question?.id !== 8
-              ? {
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                }
-              : {}
-          }
+          className={`option-container2  ${columnClass}`}
+          style={question?.id !== 8 ? {} : {}}
         >
           {questionsData[condition][currentQuestion - 1]?.options.map(
             (option, index) =>

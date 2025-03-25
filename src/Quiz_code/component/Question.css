@@ -275,6 +275,9 @@
 .show_desc {
   height: 150px;
 }
+.Container_Q3 img:hover {
+  cursor: pointer;
+}
 /* Table */
 
 /* 📱 Responsive cho Mobile */

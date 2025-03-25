@@ -274,6 +274,12 @@
   width: 35px;
   height: 20px;
 }
+.Dropdown_result2:hover {
+  cursor: pointer;
+}
+.Dropdown_result1:hover {
+  cursor: pointer;
+}
 .Dropdown_result2 p {
   width: 46.875vw;
   height: 90px;

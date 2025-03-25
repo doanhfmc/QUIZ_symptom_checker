@@ -108,7 +108,9 @@
     transition: background-color 0.3s;
     font-size: 20px;
   }
-
+  .footer_first_button img {
+    width: 90vw;
+  }
   .footer_first_button:hover {
     cursor: pointer;
   }

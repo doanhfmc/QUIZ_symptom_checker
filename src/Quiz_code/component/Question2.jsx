@@ -143,6 +143,8 @@ function Question2({ condition }) {
       ? "three_column1"
       : question?.id === 5 || question?.id === 6 || question?.id === 7
       ? "two-column2"
+      : question?.id === 2 || question?.id === 3
+      ? "two_column3"
       : "two_column1";
   return (
     <div className="background_question2">
@@ -236,7 +238,7 @@ function Question2({ condition }) {
               2007;369:1961-71; Farr A et al. Mycoses 2021;64:583-602; CDC 2022.
               Vaginal candidiasis.
               <a
-                style={{}}
+                style={{ textDecoration: "none", color: "var(--color-white)" }}
                 href="https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;"
                 target="blank"
               >

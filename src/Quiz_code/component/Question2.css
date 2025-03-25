@@ -25,8 +25,8 @@
 .number_question {
   font-size: 40px;
   font-weight: 400;
-  margin-left: 50px;
-  margin-top: 20px;
+  margin-left: 60px;
+  margin-top: 7px;
 }
 .title_question2 {
   display: flex;
@@ -61,8 +61,10 @@
 }
 .option_question {
   text-align: center;
-  margin-top: 15px;
-  width: 56vw;
+  margin-top: 20px;
+  width: 1000px;
+  font-size: 34px;
+  font-weight: 600;
 }
 .type_question {
   width: 56vw;
@@ -95,6 +97,12 @@
   row-gap: 40px;
   justify-content: center;
 }
+.two_column3 {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  justify-content: center;
+}
 .three_column1 {
   grid-template-columns: repeat(2, 1fr); /* 2 đáp án mỗi hàng */
 
@@ -108,6 +116,12 @@
   display: flex;
   flex-direction: column;
   width: 300px;
+}
+.option2:hover {
+  cursor: pointer;
+}
+.Container_Q3:hover {
+  cursor: pointer;
 }
 .img_red {
   background-image: url(../../img/Gyne/Icon\ Red.png);
@@ -162,7 +176,7 @@
 
 .disclaimer_footer {
   text-align: center;
-  width: 47vw;
+  width: 49vw;
   font-size: 15px;
   font-weight: 400;
   display: flex;
@@ -214,6 +228,10 @@
     width: 100px;
     height: 100px;
   }
+  .img_red {
+    width: 100px;
+    height: 100px;
+  }
   .img_as2 {
     width: 100px;
     height: 100px;
@@ -231,5 +249,10 @@
   .disclaimer_footer {
     font-size: 8px;
     width: 80vw;
+  }
+  .two_column3 {
+    flex-direction: column;
+    column-gap: 0px;
+    row-gap: 15px;
   }
 }

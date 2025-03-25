@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between; /* Dàn đều nội dung */
   align-items: center;
-  margin-top: 10dvh;
+  margin-top: 25dvh;
   /* Chiều cao ít nhất bằng màn hình */
   background-color: #ffffff;
 }
@@ -137,6 +137,7 @@
     margin-top: 50px;
     width: 350px;
     height: 90px;
+    margin-bottom: 50px;
   }
 
   /* Chứa các thẻ lựa chọn */
@@ -144,8 +145,8 @@
     display: grid;
     justify-content: center;
     flex-direction: row;
-    gap: 160px;
-    margin-top: 20px;
+    gap: 80px;
+    margin-top: 0px;
   }
 
   /* Thẻ bao quanh mỗi lựa chọn */
@@ -173,7 +174,7 @@
   }
 
   .card img {
-    width: 80%;
+    width: 65%;
     height: auto;
     border-radius: 50%;
   }

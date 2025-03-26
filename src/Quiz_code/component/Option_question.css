@@ -89,7 +89,7 @@
 }
 
 /* Phần footer */
-.img_footer img {
+.img_footer {
   margin-top: 200px;
   width: 100vw;
   background-repeat: no-repeat;
@@ -190,8 +190,8 @@
   }
 
   /* Phần footer */
-  .img_footer img {
-    margin-top: 200px;
+  .img_footer {
+    margin-top: 0px;
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center;

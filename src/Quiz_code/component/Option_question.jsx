@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import img1 from "../../img/0 thumb 1.png";
 import img2 from "../../img/0 thumb 2.png";
 import "./Option_question.css";
 import { useBearStore } from "../store/app";
 import footer from "../../img/Button_img/footer curve-PC-crop.png";
+import footerMobile from "../../img/footer curve.png";
+
 const Option_question = () => {
   const { increasePopulation } = useBearStore();
 
@@ -14,6 +16,18 @@ const Option_question = () => {
 
     navigate(`/${condition}`);
   };
+  const [footerImage, setFooterImage] = useState(
+    window.innerWidth <= 768 ? footerMobile : footer
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setFooterImage(window.innerWidth <= 768 ? footerMobile : footer);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div
       className="quesiton_1"
@@ -61,8 +75,9 @@ const Option_question = () => {
             </div>
           </div>
         </div>
+
         <img
-          src={footer}
+          src={footerImage}
           alt=""
           className="img_footer"
           style={{

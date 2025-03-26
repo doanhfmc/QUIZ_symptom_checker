@@ -182,7 +182,13 @@ function Result1() {
             {sliderData.map((slide, index) => (
               <div key={index} className="slide">
                 <img src={slide.img} alt={slide.title} />
-                <p style={{ fontSize: 24, fontWeight: 600, marginTop: 20 }}>
+                <p
+                  style={{
+                    fontSize: 24,
+                    fontWeight: 600,
+                    marginTop: 20,
+                  }}
+                >
                   {slide.title}
                 </p>
                 <p style={{ fontWeight: 300 }} className="slide_desc">

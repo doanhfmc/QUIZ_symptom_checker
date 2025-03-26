@@ -1,5 +1,6 @@
 .symptom-checker {
   text-align: center;
+  margin-top: 70px;
 }
 
 .header {
@@ -72,6 +73,28 @@
   background-size: cover;
 }
 
+.slide6 {
+  text-align: center;
+  margin: 0 10px;
+  color: var(--red-color);
+  background-color: white;
+  /* min-width: 50%; */
+  width: 22.5vw !important;
+  height: 780px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+}
+.slide6 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .slide img {
   width: auto;
   height: auto;
@@ -80,9 +103,7 @@
   background-position: center;
   background-size: cover;
 }
-.slide p {
-  padding-left: 20px;
-}
+
 .slide_desc {
   display: flex;
   align-items: start !important;
@@ -92,6 +113,7 @@
   font-size: 24px;
   flex-direction: column;
   width: 23vw;
+  padding-left: 20px;
 }
 .slide_ref {
   display: flex;
@@ -102,9 +124,12 @@
   flex-direction: column;
   color: black;
   font-size: 12px;
+  padding-left: 20px;
 }
 .Title6 {
-  width: 19.5vw;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align: center;
 }
 .slick-slide {
   padding: 0 15px !important; /* Khoảng cách giữa các slide */
@@ -180,7 +205,7 @@
   font-weight: bold;
   color: #010101;
   font-size: 24px;
-  padding-left: 15px;
+
   margin-bottom: 10px;
 }
 .Queston_Drop_Title {
@@ -328,6 +353,7 @@
   text-align: justify;
   padding-right: 15px;
   padding-bottom: 10px;
+  padding-left: 20px;
 }
 @media (max-width: 768px) {
   .result {
@@ -395,8 +421,22 @@
     background-position: center;
     background-size: cover;
   }
-  .slide p {
-    padding-left: 15px;
+  .slide6 p {
+    font-size: 20px;
+  }
+  .slide6 {
+    width: 70vw !important;
+    height: 600px;
+  }
+  .slide6 img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .slide6 p {
     font-size: 20px;
   }
   .slide_desc {
@@ -408,6 +448,7 @@
     font-size: 16px !important;
     flex-direction: column;
     width: auto;
+    padding-left: 15px;
   }
   .slide_ref {
     display: flex;
@@ -418,9 +459,11 @@
     flex-direction: column;
     color: black;
     font-size: 12px;
+    padding-left: 15px;
   }
   .Title6 {
-    width: 60vw;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .expand_result {
     margin-top: -40px;

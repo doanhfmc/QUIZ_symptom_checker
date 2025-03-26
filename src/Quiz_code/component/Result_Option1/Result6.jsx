@@ -68,7 +68,7 @@ const sliderData = [
         <li>Giữ vệ sinh cá nhân sạch sẽ.</li>
 
         <li>Giữ cho vùng nếp gấp da luôn khô thoáng.</li>
-        <li>ạn chế ăn thực phẩm chứa nhiều đường.</li>
+        <li>Hạn chế ăn thực phẩm chứa nhiều đường.</li>
       </ul>
     ),
     ref: (
@@ -164,7 +164,7 @@ function Result6() {
         <div className="slider-container">
           <Slider {...settings}>
             {sliderData.map((slide, index) => (
-              <div key={index} className="slide">
+              <div key={index} className="slide6">
                 <img src={slide.img} alt={slide.title} />
                 <p style={{ fontSize: 24, fontWeight: 600, marginTop: 20 }}>
                   {slide.title}

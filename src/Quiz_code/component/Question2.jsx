@@ -148,6 +148,24 @@ function Question2({ condition }) {
         }
       }
 
+      if (
+        !dataSelect[7]?.answer7?.includes(70) &&
+        dataSelect[2]?.answer2?.includes(20) &&
+        dataSelect[4]?.answer4?.includes(43) &&
+        dataSelect.length === 8
+      ) {
+        navigate("/Result1p");
+        return;
+      }
+      if (
+        !dataSelect[7]?.answer7?.includes(70) &&
+        dataSelect[2]?.answer2?.includes(21) &&
+        dataSelect[4]?.answer4?.includes(42) &&
+        dataSelect.length === 8
+      ) {
+        navigate("/Result2Op");
+        return;
+      }
       if (!dataSelect[7]?.answer7?.includes(70) && dataSelect.length === 8) {
         navigate("/Result4Op");
         return;

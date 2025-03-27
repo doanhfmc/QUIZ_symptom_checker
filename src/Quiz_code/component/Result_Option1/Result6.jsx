@@ -169,7 +169,7 @@ function Result6() {
                 <p style={{ fontSize: 24, fontWeight: 600, marginTop: 20 }}>
                   {slide.title}
                 </p>
-                <p style={{ fontWeight: 300 }} className="slide_desc">
+                <p style={{ fontWeight: 300 }} className="slide_desc6">
                   {slide.description}
                 </p>
                 <p

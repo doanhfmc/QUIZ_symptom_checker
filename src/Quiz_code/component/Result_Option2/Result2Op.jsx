@@ -102,7 +102,7 @@ const Result2Op = () => {
                         <div className="Answer_Drop2" style={{}}>
                           <span style={{ fontWeight: "normal" }}>
                             <strong>Bạn trả lời: </strong>
-                            {item.selectedAnswers2.join(",") ||
+                            {item.selectedAnswers2.join(". ") ||
                               "Chưa chọn đáp án"}
 
                             {/* {questionsData.skin

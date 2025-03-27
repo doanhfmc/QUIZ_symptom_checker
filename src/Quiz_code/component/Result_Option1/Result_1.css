@@ -40,7 +40,7 @@
   background-color: #c01b31;
   color: white;
   width: 100vw;
-  height: 963px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -81,7 +81,7 @@
   /* min-width: 50%; */
   width: 25.5vw !important;
   padding-bottom: 100px;
-  height: 770px;
+  height: 800px;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
@@ -438,7 +438,7 @@
   }
   .slide6 {
     width: 70vw !important;
-    height: 600px;
+    height: 650px;
   }
   .slide6 img {
     width: auto;

@@ -154,7 +154,7 @@ function Question2({ condition }) {
         dataSelect[4]?.answer4?.includes(43) &&
         dataSelect.length === 8
       ) {
-        navigate("/Result1p");
+        navigate("/Result1Op");
         return;
       }
       if (

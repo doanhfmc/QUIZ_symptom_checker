@@ -6,8 +6,11 @@ import { useBearStore } from "../store/app.js";
 import Next from "../../img/Gyne/Tiep tuc xanh.png";
 import DisabledNext from "../../img/Gyne/Tiep tuc xam.png";
 import "./Question2.css";
-import Yes_sel from "../../img/03 _ Co.png";
-import Top from "../../img/Gyne/Top+Bot/Top Desk 1280x270.png";
+import ReactGA from "react-ga4";
+import TopDesk from "../../img/Gyne/Top+Bot/Top Desk 1280x270.png";
+import TopMob from "../../img/Gyne/Top+Bot/top MO 960x400.png";
+import BotDesk from "../../img/Gyne/Top+Bot/Bot Desk 1280x270.png";
+import BotMob from "../../img/Gyne/Top+Bot/bot MO 960x248.png";
 function Question2({ condition }) {
   const { increasePopulation, dataSelect } = useBearStore();
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -15,9 +18,7 @@ function Question2({ condition }) {
   // const [answers, setAnswers] = useState([]);
   const [answers_select, setAnswers_select] = useState([]);
   const [answersid, setAnswerid] = useState([]);
-
   const [type, setType] = useState("single");
-
   const navigate = useNavigate();
   console.log(dataSelect);
   useEffect(() => {
@@ -39,7 +40,7 @@ function Question2({ condition }) {
     if (question?.id === 1 || question?.id === 8) {
       setType("multi");
     } else setType("single");
-  }, [question?.id, answersid.length]);
+  }, [question?.id, answersid]);
 
   const handleAnswer = (answer) => {
     switch (type) {
@@ -74,6 +75,12 @@ function Question2({ condition }) {
   };
 
   const nextPage = () => {
+    ReactGA.event({
+      event: "next_button_click",
+      category: "User Interaction",
+      action: `ID  ${answersid} của câu ${question?.id} `,
+      label: `câu trả lời ${answersid}`,
+    });
     increasePopulation({
       //
       questionId: question.id,
@@ -110,6 +117,22 @@ function Question2({ condition }) {
         if (
           dataSelect[2]?.answer2?.includes(20) &&
           dataSelect[4]?.answer4?.includes(43) &&
+          dataSelect[8]?.answer8?.includes(83)
+        ) {
+          navigate("/Result1Op");
+          return;
+        }
+        if (
+          dataSelect[2]?.answer2?.includes(21) &&
+          dataSelect[4]?.answer4?.includes(42) &&
+          dataSelect[8]?.answer8?.includes(83)
+        ) {
+          navigate("/Result2Op");
+          return;
+        }
+        if (
+          dataSelect[2]?.answer2?.includes(20) &&
+          dataSelect[4]?.answer4?.includes(43) &&
           dataSelect.length === 9
         ) {
           navigate("/Result4Op");
@@ -137,7 +160,30 @@ function Question2({ condition }) {
       navigate("/Result4Op");
     }
   }, [dataSelect.length]);
+  const [topImage, setTopImage] = useState(
+    window.innerWidth <= 768 ? TopMob : TopDesk
+  );
 
+  useEffect(() => {
+    const handleResize = () => {
+      setTopImage(window.innerWidth <= 768 ? TopMob : TopDesk);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const [botImage, setBottomImage] = useState(
+    window.innerWidth <= 768 ? BotMob : BotDesk
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setBottomImage(window.innerWidth <= 768 ? BotMob : BotDesk);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const columnClass =
     question?.id === 8
       ? "three_column1"
@@ -146,11 +192,12 @@ function Question2({ condition }) {
       : question?.id === 2 || question?.id === 3
       ? "two_column3"
       : "two_column1";
+
   return (
     <div className="background_question2">
       <div className="question2_2">
         <div className="title_question2">
-          <img src={Top} alt="" />
+          <img src={topImage} alt="" />
           <div
             style={{
               position: "absolute",
@@ -205,7 +252,7 @@ function Question2({ condition }) {
               ) : (
                 <div className="Q3">
                   <div
-                    className="Container_Q3 "
+                    className="Container_04 "
                     onClick={() => handleAnswer(option)}
                   >
                     <div>
@@ -232,32 +279,38 @@ function Question2({ condition }) {
           )}
         </div>
         <div className="Next_2">
-          <div className="disclaimer_footer">
-            <p>
-              Am Fam Physician. 2018 Mar 1;97(5):321-329; Sobel JD. Lancet
-              2007;369:1961-71; Farr A et al. Mycoses 2021;64:583-602; CDC 2022.
-              Vaginal candidiasis.
-              <a
-                style={{ textDecoration: "none", color: "var(--color-white)" }}
-                href="https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;"
-                target="blank"
+          <img src={botImage} alt="" />
+          <div className="footer_Q2" style={{ position: "absolute" }}>
+            <div className="disclaimer_footer">
+              <p>
+                Am Fam Physician. 2018 Mar 1;97(5):321-329; Sobel JD. Lancet
+                2007;369:1961-71; Farr A et al. Mycoses 2021;64:583-602; CDC
+                2022. Vaginal candidiasis.
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: "var(--color-white)",
+                  }}
+                  href="https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;"
+                  target="blank"
+                >
+                  https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;
+                </a>
+                Nasir R et al. Europasian J Med Sci 2023;5(1):1-10
+              </p>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button
+                className="Btn_Next2"
+                onClick={nextPage}
+                disabled={answers_select?.length === 0}
               >
-                https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;
-              </a>
-              Nasir R et al. Europasian J Med Sci 2023;5(1):1-10
-            </p>
-          </div>
-          <div>
-            <button
-              className="Btn_Next"
-              onClick={nextPage}
-              disabled={answers_select?.length === 0}
-            >
-              <img
-                src={answers_select?.length === 0 ? DisabledNext : Next}
-                alt="Next Button"
-              />
-            </button>
+                <img
+                  src={answers_select?.length === 0 ? DisabledNext : Next}
+                  alt="Next Button"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </div>

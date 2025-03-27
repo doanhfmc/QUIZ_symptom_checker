@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between; /* Dàn đều nội dung */
   align-items: center;
-  margin-top: 25dvh;
+  margin-top: 200px;
   /* Chiều cao ít nhất bằng màn hình */
   background-color: #ffffff;
 }

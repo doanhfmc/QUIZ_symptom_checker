@@ -144,7 +144,7 @@ function Result2() {
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
-          <p className="sick">Hắc Lào</p>
+          <p className="sick">HẮC LÀO</p>
           <a href="#" target="blank">
             <img src={Btn_Sol} alt="" />{" "}
           </a>

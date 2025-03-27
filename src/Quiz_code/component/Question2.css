@@ -27,6 +27,7 @@
   font-weight: 400;
   margin-left: 60px;
   margin-top: 7px;
+  font-weight: 600;
 }
 .title_question2 {
   display: flex;
@@ -230,6 +231,7 @@
     margin-left: 20px;
     margin-top: 3px;
     margin-bottom: 5px;
+    font-weight: bold;
   }
   .type_question {
     width: 300px;

@@ -236,7 +236,7 @@ export const questionsData = {
   intimate: [
     {
       id: 1,
-      text_1: "Câu hỏi 1",
+      text_1: "CÂU HỎI 1",
       text: "Bạn đang gặp phải triệu chứng nào ở vùng kín?",
       type: "Chọn nhiều đáp án nếu có",
       options: [
@@ -262,7 +262,7 @@ export const questionsData = {
     },
     {
       id: 2,
-      text_1: "Câu hỏi 2",
+      text_1: "CÂU HỎI 2",
       text: "Theo cảm nhận của bạn, mùi dịch âm đạo của bạn như thế nào? ",
       type: "Chỉ chọn một đáp án",
       options: [
@@ -274,7 +274,7 @@ export const questionsData = {
 
     {
       id: 3,
-      text_1: "Câu hỏi 3",
+      text_1: "CÂU HỎI 3",
       text: "Bạn có nhận thấy sự thay đổi về lượng dịch âm đạo (không tính máu kinh nguyệt) so với trước đây không? ",
       type: "Chỉ chọn một đáp án",
       options: [
@@ -285,7 +285,7 @@ export const questionsData = {
     },
     {
       id: 4,
-      text_1: "Câu hỏi 4",
+      text_1: "CÂU HỎI 4",
       text: "Dựa vào quan sát của bạn, dịch âm đạo giống với hình ảnh nào nhất?",
       type: "Chỉ chọn một đáp án",
       options: [
@@ -308,7 +308,7 @@ export const questionsData = {
     },
     {
       id: 5,
-      text_1: "Câu hỏi 5",
+      text_1: "CÂU HỎI 5",
       text: " Bạn có bị sốt không? ",
       type: "Chỉ chọn một đáp án",
       options: [
@@ -318,7 +318,7 @@ export const questionsData = {
     },
     {
       id: 6,
-      text_1: "Câu hỏi 6",
+      text_1: "CÂU HỎI 6",
       text: "Bạn có cảm thấy đau ở vùng bụng dưới không? ",
       type: "Chỉ chọn một đáp án",
       options: [
@@ -329,7 +329,7 @@ export const questionsData = {
 
     {
       id: 7,
-      text_1: "Câu hỏi 7",
+      text_1: "CÂU HỎI 7",
       text: "Bạn có đi tiểu nhiều lần hơn bình thường không?  ",
       type: "Chỉ chọn một đáp án",
       options: [
@@ -339,7 +339,7 @@ export const questionsData = {
     },
     {
       id: 8,
-      text_1: "Câu hỏi 8",
+      text_1: "CÂU HỎI 8",
       text: "Nước tiểu của bạn có kèm theo triệu chứng nào dưới đây không? ",
       type: "Chọn nhiều đáp án nếu có",
       options: [

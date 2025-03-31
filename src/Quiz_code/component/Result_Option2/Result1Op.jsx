@@ -17,7 +17,7 @@ const Result1Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="Uterus Illustration" />
+            <img className="" src={img} alt="NHIỄM NẤM ÂM ĐẠO" />
           </div>
           <div className="text_result_container">
             {" "}
@@ -26,13 +26,13 @@ const Result1Op = () => {
             </span>
             <p className="text3_result1">NHIỄM NẤM ÂM ĐẠO</p>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src={CTA} alt="" />
+              <img src={CTA} alt="NHIỄM NẤM ÂM ĐẠO" />
             </a>
           </div>
         </div>
         <div className="center_container">
           <p className="text1_center">BẠN CÓ BIẾT?</p>
-          <img src={icon_center} alt="" />
+          <img src={icon_center} alt="NHIỄM NẤM ÂM ĐẠO" />
           <p className="text2_center">
             <span style={{ fontWeight: 600 }}>
               70-75% phụ nữ trong độ tuổi sinh sản bị nhiễm nấm âm đạo ít nhất
@@ -51,13 +51,13 @@ const Result1Op = () => {
             {isOpen ? (
               <div className="Dropdown_result3">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="NHIỄM NẤM ÂM ĐẠO" />{" "}
                 </p>
               </div>
             ) : (
               <div className="Dropdown_result4">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="NHIỄM NẤM ÂM ĐẠO" />{" "}
                 </p>
               </div>
             )}

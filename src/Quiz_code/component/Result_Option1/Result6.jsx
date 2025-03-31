@@ -7,8 +7,6 @@ import thumbslide2 from "../../../img/Thumb_Slide/06 slider-viemdanepke 2.jpg";
 import Arrow_prev from "../../../img/Button_img/slider icon 2.png";
 import Arrow_next from "../../../img/Button_img/slider icon.png";
 import Btn_Sol from "../../../img/Button_img/button tim hieu.png";
-import Info_Open from "../../../img/Button_img/button xem lai.png";
-import Info_Close from "../../../img/Button_img/button xem lai expand BG.png";
 import arrow from "../../../img/Button_img/mui ten.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -138,14 +136,14 @@ function Result6() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="Ringworm" />
+          <img src={thumbmain} alt="VIÊM DA NẾP KẼ DO VI KHUẨN" />
         </div>
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
           <p className="sick">VIÊM DA NẾP KẼ DO VI KHUẨN</p>
           <a href="#" target="blank">
-            <img src={Btn_Sol} alt="" />{" "}
+            <img src={Btn_Sol} alt="VIÊM DA NẾP KẼ DO VI KHUẨN" />{" "}
           </a>
         </div>
       </section>
@@ -155,12 +153,6 @@ function Result6() {
         <p className="content_1">BẠN CÓ BIẾT?</p>
         <p className="content_2"></p>
 
-        {/* <img
-            className="prev-button"
-            src={Arrow_prev}
-            alt=""
-            onClick={handlePrev}
-          /> */}
         <div className="slider-container">
           <Slider {...settings}>
             {sliderData.map((slide, index) => (
@@ -187,25 +179,21 @@ function Result6() {
             ))}
           </Slider>
         </div>
-        {/* <img
-            className="next-button"
-            src={Arrow_next}
-            alt=""
-            onClick={handleNext}
-          /> */}
       </section>
       <div className="Dropdown_result">
         <div onClick={toggleDropdown} className="Info">
           {isOpen ? (
             <div className="Dropdown_result1">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI{" "}
+                <img src={arrow} alt="VIÊM DA NẾP KẼ DO VI KHUẨN" />{" "}
               </p>
             </div>
           ) : (
             <div className="Dropdown_result2">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI{" "}
+                <img src={arrow} alt="VIÊM DA NẾP KẼ DO VI KHUẨN" />{" "}
               </p>
             </div>
           )}

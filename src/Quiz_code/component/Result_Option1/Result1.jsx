@@ -146,7 +146,7 @@ function Result1() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="Ringworm" />
+          <img src={thumbmain} alt="NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI" />
         </div>
         <div className="section_left">
           {" "}
@@ -157,7 +157,7 @@ function Result1() {
             NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI
           </p>
           <a href="#" target="blank">
-            <img src={Btn_Sol} alt="" />{" "}
+            <img src={Btn_Sol} alt="NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI" />{" "}
           </a>
         </div>
       </section>
@@ -171,12 +171,6 @@ function Result1() {
           Sự khác biệt giữa Nhiễm nấm da do thú cưng và các bệnh ngoài da khác:
         </p>
 
-        {/* <img
-            className="prev-button"
-            src={Arrow_prev}
-            alt=""
-            onClick={handlePrev}
-          /> */}
         <div className="slider-container">
           <Slider {...settings}>
             {sliderData.map((slide, index) => (
@@ -209,25 +203,21 @@ function Result1() {
             ))}
           </Slider>
         </div>
-        {/* <img
-            className="next-button"
-            src={Arrow_next}
-            alt=""
-            onClick={handleNext}
-          /> */}
       </section>
       <div className="Dropdown_result">
         <div onClick={toggleDropdown} className="Info">
           {isOpen ? (
             <div className="Dropdown_result1">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI{" "}
+                <img src={arrow} alt="NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI" />{" "}
               </p>
             </div>
           ) : (
             <div className="Dropdown_result2">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI{" "}
+                <img src={arrow} alt="NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI" />{" "}
               </p>
             </div>
           )}

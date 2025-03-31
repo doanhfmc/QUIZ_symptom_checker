@@ -215,7 +215,7 @@ function Question2({ condition }) {
     <div className="background_question2">
       <div className="question2_2">
         <div className="title_question2">
-          <img src={topImage} alt="" />
+          <img src={topImage} alt="top background" />
           <div
             style={{
               position: "absolute",
@@ -297,7 +297,7 @@ function Question2({ condition }) {
           )}
         </div>
         <div className="Next_2">
-          <img src={botImage} alt="" />
+          <img src={botImage} alt="bot background" />
           <div className="footer_Q2" style={{ position: "absolute" }}>
             <div className="disclaimer_footer">
               <p>

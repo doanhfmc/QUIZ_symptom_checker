@@ -241,15 +241,15 @@ export const questionsData = {
       type: "Chọn nhiều đáp án nếu có",
       options: [
         { _id: 10, text: "Không có cảm giác bất thường", img: img210 },
-        { _id: 11, text: "Ngứa", img: img211 },
-        { _id: 12, text: "Đau nhức", img: img212 },
-        { _id: 13, text: "Kích ứng", img: img213 },
-        { _id: 14, text: "Nóng rát", img: img214 },
-        { _id: 15, text: "Cảm giác châm chích", img: img215 },
+        { _id: 11, text: "Ngứa", img: img212 },
+        { _id: 12, text: "Đau nhức", img: img214 },
+        { _id: 13, text: "Kích ứng", img: img216 },
+        { _id: 14, text: "Nóng rát", img: img211 },
+        { _id: 15, text: "Cảm giác châm chích", img: img213 },
         {
           _id: 16,
           text: "Tiểu buốt ",
-          img: img216,
+          img: img215,
           ref: "(Đau hoặc nóng rát khi đi tiểu)",
         },
         {

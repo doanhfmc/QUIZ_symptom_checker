@@ -238,11 +238,11 @@ function Question({ condition }) {
                           Nguồn tham khảo
                           {!showRef.filter((item) => item.id === option._id)[0]
                             ?.show ? (
-                            <img src={arrow} alt="" />
+                            <img src={arrow} alt="arrow" />
                           ) : (
                             <img
                               src={arrow}
-                              alt=""
+                              alt="arrow"
                               style={{
                                 transform: "unset",
                               }}

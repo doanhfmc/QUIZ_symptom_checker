@@ -17,7 +17,11 @@ const Result4Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="Uterus Illustration" />
+            <img
+              className=""
+              src={img}
+              alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO"
+            />
           </div>
           <div className="text_result_container">
             {" "}
@@ -29,7 +33,7 @@ const Result4Op = () => {
             <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
             <p className="text3_result">VIÊM NẤM ÂM ĐẠO</p>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src={CTA} alt="" />
+              <img src={CTA} alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO" />
             </a>
           </div>
         </div>
@@ -39,13 +43,21 @@ const Result4Op = () => {
             {isOpen ? (
               <div className="Dropdown_result3">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI{" "}
+                  <img
+                    src={arrow}
+                    alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO"
+                  />{" "}
                 </p>
               </div>
             ) : (
               <div className="Dropdown_result4">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI{" "}
+                  <img
+                    src={arrow}
+                    alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO"
+                  />{" "}
                 </p>
               </div>
             )}

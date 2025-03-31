@@ -194,14 +194,14 @@ function Result4() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="Ringworm" />
+          <img src={thumbmain} alt="NẤM BẸN" />
         </div>
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
           <p className="sick">NẤM BẸN</p>
           <a href="#" target="blank">
-            <img src={Btn_Sol} alt="" />{" "}
+            <img src={Btn_Sol} alt="NẤM BẸN" />{" "}
           </a>
         </div>
       </section>
@@ -213,12 +213,6 @@ function Result4() {
           Sự khác biệt giữa Nấm bẹn và các bệnh ngoài da tương tự:
         </p>
 
-        {/* <img
-            className="prev-button"
-            src={Arrow_prev}
-            alt=""
-            onClick={handlePrev}
-          /> */}
         <div className="slider-container_3">
           <Slider {...settings}>
             {sliderData.map((slide, index) => (
@@ -245,25 +239,19 @@ function Result4() {
             ))}
           </Slider>
         </div>
-        {/* <img
-            className="next-button"
-            src={Arrow_next}
-            alt=""
-            onClick={handleNext}
-          /> */}
       </section>
       <div className="Dropdown_result">
         <div onClick={toggleDropdown} className="Info">
           {isOpen ? (
             <div className="Dropdown_result1">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="NẤM BẸN" />{" "}
               </p>
             </div>
           ) : (
             <div className="Dropdown_result2">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="NẤM BẸN" />{" "}
               </p>
             </div>
           )}

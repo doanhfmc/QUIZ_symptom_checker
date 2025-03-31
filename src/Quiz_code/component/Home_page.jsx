@@ -27,7 +27,11 @@ const Home_page = () => {
               </p>
             </div>
             <div className="footer_first_button">
-              <img src={start} alt="" onClick={() => navigate("/Option")}></img>
+              <img
+                src={start}
+                alt="symptom checker"
+                onClick={() => navigate("/Option")}
+              ></img>
             </div>
           </div>
         </div>

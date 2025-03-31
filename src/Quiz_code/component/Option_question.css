@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between; /* Dàn đều nội dung */
   align-items: center;
-  margin-top: 200px;
+  margin-top: 20px;
   /* Chiều cao ít nhất bằng màn hình */
   background-color: #ffffff;
 }
@@ -27,7 +27,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 40%;
+  /* bottom: 40%; */
+  top: 0%;
 }
 /* Tiêu đề */
 .title-container {

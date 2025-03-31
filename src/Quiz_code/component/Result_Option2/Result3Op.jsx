@@ -17,7 +17,7 @@ const Result3Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="Uterus Illustration" />
+            <img className="" src={img} alt="NHIỄM TRÙNG NƯỚC TIỂU" />
           </div>
           <div className="text_result_container">
             {" "}
@@ -26,7 +26,7 @@ const Result3Op = () => {
             </span>
             <p className="text3_result1">NHIỄM TRÙNG NƯỚC TIỂU</p>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src={CTA} alt="" />
+              <img src={CTA} alt="NHIỄM TRÙNG NƯỚC TIỂU" />
             </a>
           </div>
         </div>
@@ -36,13 +36,15 @@ const Result3Op = () => {
             {isOpen ? (
               <div className="Dropdown_result3">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI{" "}
+                  <img src={arrow} alt="NHIỄM TRÙNG NƯỚC TIỂU" />{" "}
                 </p>
               </div>
             ) : (
               <div className="Dropdown_result4">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI{" "}
+                  <img src={arrow} alt="NHIỄM TRÙNG NƯỚC TIỂU" />{" "}
                 </p>
               </div>
             )}

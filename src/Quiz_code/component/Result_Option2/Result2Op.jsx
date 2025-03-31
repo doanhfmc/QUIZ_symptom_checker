@@ -17,7 +17,7 @@ const Result2Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="Uterus Illustration" />
+            <img className="" src={img} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
           </div>
           <div className="text_result_container">
             {" "}
@@ -26,13 +26,13 @@ const Result2Op = () => {
             </span>
             <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN</p>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src={CTA} alt="" />
+              <img src={CTA} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
             </a>
           </div>
         </div>
         <div className="center_container">
           <p className="text1_center">BẠN CÓ BIẾT?</p>
-          <img src={icon_center} alt="" />
+          <img src={icon_center} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
           <p className="text2_center">
             Viêm âm đạo do vi khuẩn là{" "}
             <span style={{ fontWeight: 600 }}>
@@ -57,13 +57,15 @@ const Result2Op = () => {
             {isOpen ? (
               <div className="Dropdown_result3">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI{" "}
+                  <img src={arrow} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />{" "}
                 </p>
               </div>
             ) : (
               <div className="Dropdown_result4">
                 <p style={{ background: "#172bc1" }}>
-                  XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                  XEM LẠI CÂU TRẢ LỜI{" "}
+                  <img src={arrow} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />{" "}
                 </p>
               </div>
             )}

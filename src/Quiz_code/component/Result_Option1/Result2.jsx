@@ -7,8 +7,6 @@ import thumbslide2 from "../../../img/Thumb_Slide/01 slider-vaynen.jpg";
 import Arrow_prev from "../../../img/Button_img/slider icon 2.png";
 import Arrow_next from "../../../img/Button_img/slider icon.png";
 import Btn_Sol from "../../../img/Button_img/button tim hieu.png";
-import Info_Open from "../../../img/Button_img/button xem lai.png";
-import Info_Close from "../../../img/Button_img/button xem lai expand BG.png";
 import arrow from "../../../img/Button_img/mui ten.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -139,14 +137,14 @@ function Result2() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="Ringworm" />
+          <img src={thumbmain} alt="HẮC LÀO" />
         </div>
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
           <p className="sick">HẮC LÀO</p>
           <a href="#" target="blank">
-            <img src={Btn_Sol} alt="" />{" "}
+            <img src={Btn_Sol} alt="HẮC LÀO" />{" "}
           </a>
         </div>
       </section>
@@ -158,12 +156,6 @@ function Result2() {
           Khác biệt giữa Hắc lào và các bệnh tương tự:
         </p>
 
-        {/* <img
-            className="prev-button"
-            src={Arrow_prev}
-            alt=""
-            onClick={handlePrev}
-          /> */}
         <div className="slider-container">
           <Slider {...settings}>
             {sliderData.map((slide, index) => (
@@ -190,25 +182,19 @@ function Result2() {
             ))}
           </Slider>
         </div>
-        {/* <img
-            className="next-button"
-            src={Arrow_next}
-            alt=""
-            onClick={handleNext}
-          /> */}
       </section>
       <div className="Dropdown_result">
         <div onClick={toggleDropdown} className="Info">
           {isOpen ? (
             <div className="Dropdown_result1">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="HẮC LÀO" />{" "}
               </p>
             </div>
           ) : (
             <div className="Dropdown_result2">
               <p style={{ background: "#172bc1" }}>
-                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="" />{" "}
+                XEM LẠI CÂU TRẢ LỜI <img src={arrow} alt="HẮC LÀO" />{" "}
               </p>
             </div>
           )}

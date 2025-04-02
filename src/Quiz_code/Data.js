@@ -243,7 +243,7 @@ export const questionsData = {
         { _id: 10, text: "Không có cảm giác bất thường", img: img210 },
         { _id: 11, text: "Ngứa", img: img212 },
         { _id: 12, text: "Đau nhức", img: img214 },
-        { _id: 13, text: "Kích ứng", img: img216 },
+        { _id: 13, text: "Mẩn đỏ ", img: img216 },
         { _id: 14, text: "Nóng rát", img: img211 },
         { _id: 15, text: "Cảm giác châm chích", img: img213 },
         {

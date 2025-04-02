@@ -126,6 +126,18 @@
 .Container_Q3:hover {
   cursor: pointer;
 }
+.option3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+}
+.option3:hover {
+  cursor: pointer;
+}
+.Container_Q3:hover {
+  cursor: pointer;
+}
 .img_red {
   background-image: url(../../img/Gyne/Icon\ Red.png);
   background-repeat: no-repeat;
@@ -156,6 +168,42 @@
   position: absolute;
   z-index: 2;
 }
+.img_red1 {
+  background-image: url(../../img/Gyne/Icon\ Red.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  z-index: 2;
+}
+.img_blue1 {
+  background-image: url(../../img/Gyne/Icon\ Blue.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  z-index: 2;
+}
+.img_as21 {
+  position: relative;
+  z-index: 1;
+  width: 170px;
+  height: 170px;
+}
 .img_as2 {
   position: relative;
   z-index: 1;
@@ -176,7 +224,21 @@
   font-size: 16px;
   font-weight: bold;
 }
-
+.text2_as1 {
+  width: 200px;
+  text-align: center;
+  color: var(--blue-color);
+  text-shadow: -1px 0.8px 0px #eb569f;
+  font-size: 24px;
+  font-weight: bold;
+}
+.ref2_as1 {
+  color: var(--blue-color);
+  text-shadow: -1px 0.8px 0px #eb569f;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
 .disclaimer_footer {
   text-align: center;
   width: 900px;
@@ -261,6 +323,9 @@
   .option2 {
     width: 100px;
   }
+  .option3 {
+    width: 100px;
+  }
 
   .img_blue {
     width: 100px;
@@ -270,7 +335,19 @@
     width: 100px;
     height: 100px;
   }
+  .img_blue1 {
+    width: 100px;
+    height: 100px;
+  }
+  .img_red1 {
+    width: 100px;
+    height: 100px;
+  }
   .img_as2 {
+    width: 100px;
+    height: 100px;
+  }
+  .img_as21 {
     width: 100px;
     height: 100px;
   }
@@ -280,6 +357,16 @@
     text-align: center;
   }
   .ref2_as {
+    font-size: 8px;
+    width: 150px;
+    text-align: center;
+  }
+  .text2_as1 {
+    width: 115px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .ref2_as1 {
     font-size: 8px;
     width: 150px;
     text-align: center;

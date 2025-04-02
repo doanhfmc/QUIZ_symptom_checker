@@ -243,9 +243,10 @@ function Question2({ condition }) {
         >
           {questionsData[condition][currentQuestion - 1]?.options.map(
             (option, index) =>
-              questionsData[condition][currentQuestion - 1]?.id !== 5 &&
-              questionsData[condition][currentQuestion - 1]?.id !== 6 &&
-              questionsData[condition][currentQuestion - 1]?.id !== 7 ? (
+              questionsData[condition][currentQuestion - 1]?.id === 2 ||
+              questionsData[condition][currentQuestion - 1]?.id === 3 ||
+              questionsData[condition][currentQuestion - 1]?.id === 4 ||
+              questionsData[condition][currentQuestion - 1]?.id === 8 ? (
                 <div className="option2" onClick={() => handleAnswer(option)}>
                   <div>
                     <div
@@ -266,6 +267,28 @@ function Question2({ condition }) {
                   </div>
                   <div className="text2_as">{option?.text}</div>
                   <div className="ref2_as">{option?.ref}</div>
+                </div>
+              ) : questionsData[condition][currentQuestion - 1]?.id === 1 ? (
+                <div className="option3" onClick={() => handleAnswer(option)}>
+                  <div>
+                    <div
+                      className={` ${
+                        answers_select?.filter((item) => item === option?.text)
+                          ?.length !== 0
+                          ? "img_red1"
+                          : "img_blue1"
+                      }`}
+                    ></div>
+
+                    <img
+                      className="img_as21"
+                      key={index}
+                      src={option?.img}
+                      alt={option?.text}
+                    />
+                  </div>
+                  <div className="text2_as1">{option?.text}</div>
+                  <div className="ref2_as1">{option?.ref}</div>
                 </div>
               ) : (
                 <div className="Q3">

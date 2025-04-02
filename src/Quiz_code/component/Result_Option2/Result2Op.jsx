@@ -30,16 +30,16 @@ const Result2Op = () => {
             </a>
           </div>
         </div>
-        <div className="center_container">
+        <div className="center_container2">
           <p className="text1_center">BẠN CÓ BIẾT?</p>
           <img src={icon_center} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
           <p className="text2_center">
             Viêm âm đạo do vi khuẩn là{" "}
             <span style={{ fontWeight: 600 }}>
-              tình trạng phổ biến và là nguyên nhân thường gặp nhất trên toàn
-              cầu
+              tình trạng phổ biến và là nguyên nhân thường gặp nhất
             </span>{" "}
-            gây ra tình trạng khí hư bất thường. <sup>3</sup>
+            gây ra tình trạng khí hư bất thường. Đừng lo lắng, hãy tìm hiểu và
+            thăm khám để có giải pháp phù hợp nhé! <sup>3</sup>
           </p>
           <p className="text3_center">
             3.{" "}

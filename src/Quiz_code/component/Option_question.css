@@ -35,7 +35,7 @@
   font-size: 36px !important;
   font-weight: bold;
   color: #a11212;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 
   width: 430px;
   height: 90px;
@@ -69,12 +69,12 @@
   align-items: center;
   justify-content: center;
   background: #fff;
-
+  border-radius: 30px;
   padding: 15px;
 }
 
 .card img {
-  width: 80%;
+  width: 78%;
   height: auto;
   border-radius: 50%;
 }

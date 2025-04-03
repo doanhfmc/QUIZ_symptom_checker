@@ -91,7 +91,12 @@ function Question2({ condition }) {
     });
     setCurrentQuestion(currentQuestion + 1);
     setAnswers_select([]);
-    console.log(question?.id);
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
   };
 
   useEffect(() => {

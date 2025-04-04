@@ -31,23 +31,30 @@ const Result1Op = () => {
           </div>
         </div>
         <div className="center_container">
-          <p className="text1_center">BẠN CÓ BIẾT?</p>
-          <img src={icon_center} alt="NHIỄM NẤM ÂM ĐẠO" />
-          <p className="text2_center">
-            <span>
-              Có đến
-              <span style={{ fontWeight: 600 }}>
-                70-75% phụ nữ trong độ tuổi sinh sản bị nhiễm nấm âm đạo ít nhất
-                một lần trong đời.
-              </span>{" "}
-              40-45% bệnh nhân bị tái phát ít nhất 1 lần/ năm và 5-8% phát triển
-              thành viêm âm đạo dai dẳng (≥ 4 lần/ năm). Đừng lo lắng, hãy tìm
-              hiểu và thăm khám để có giải pháp phù hợp nhé! <sup>2</sup>
-            </span>
-          </p>
-          <p className="text3_center">
-            2. Zeng et al. Biomed Research International. 2018; 9703754
-          </p>
+          <div className="img_leftRS">
+            {" "}
+            <img src={icon_center} alt="NHIỄM NẤM ÂM ĐẠO" />
+          </div>
+          <div className="text_rightRS">
+            <p className="text1_center">BẠN CÓ BIẾT?</p>
+
+            <p className="text2_center">
+              <span>
+                Có đến
+                <span style={{ fontWeight: 600 }}>
+                  70-75% phụ nữ trong độ tuổi sinh sản bị nhiễm nấm âm đạo ít
+                  nhất một lần trong đời.
+                </span>{" "}
+                40-45% bệnh nhân bị tái phát ít nhất 1 lần/ năm và 5-8% phát
+                triển thành viêm âm đạo dai dẳng (≥ 4 lần/ năm)<sup>2</sup>.
+                Đừng lo lắng, hãy tìm hiểu và thăm khám để có giải pháp phù hợp
+                nhé!
+              </span>
+            </p>
+            <p className="text3_center">
+              2. Zeng et al. Biomed Research International. 2018; 9703754
+            </p>
+          </div>
         </div>
         <div className="Dropdown_result_total">
           <div onClick={toggleDropdown} className="Info1">

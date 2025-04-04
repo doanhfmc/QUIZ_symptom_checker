@@ -83,22 +83,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   width: 1400px;
   background-color: var(--red-color);
-  height: 650px;
+  height: 450px;
 }
 .center_container2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   width: 1400px;
   background-color: var(--green-color);
-  height: 650px;
+  height: 420px;
+}
+.text_rightRS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
 }
 .text1_center {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -106,9 +112,9 @@
   font-size: 35px;
   font-weight: 300;
   text-align: center;
-  width: 61vw;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  width: 48vw;
+  margin-bottom: 70px;
+  margin-top: 0px;
 }
 .text3_center {
   font-size: 18px;
@@ -165,7 +171,7 @@
   width: 1400px;
   height: 90px;
   margin: 0 auto;
-  font-size: 36px;
+  font-size: 32px;
   display: flex;
   font-weight: bold;
   align-items: center;
@@ -230,15 +236,17 @@
   }
   .center_container {
     width: 85vw;
+    flex-direction: column;
     height: 270px;
   }
   .center_container2 {
+    flex-direction: column;
     width: 85vw;
     height: 240px;
   }
   .text1_center {
-    font-size: 22px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 110px;
   }
   .text2_center {
     font-size: 12px;
@@ -246,6 +254,15 @@
     text-align: center;
     margin-bottom: 10px;
     margin-top: 5px;
+  }
+  .text_rightRS {
+    margin-left: 0px;
+    position: absolute;
+  }
+  .img_leftRS {
+    position: relative;
+    left: 0px;
+    top: -30px;
   }
   .text3_center {
     font-size: 8px;
@@ -265,7 +282,7 @@
   .Dropdown_result4 p {
     width: 85vw;
     height: 46px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .Dropdown_result4 img {
     width: 20px;
@@ -281,7 +298,7 @@
   .Dropdown_result3 p {
     width: 85vw;
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .Dropdown_result3 img {
     width: 20px;

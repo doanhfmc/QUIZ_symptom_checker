@@ -31,26 +31,32 @@ const Result2Op = () => {
           </div>
         </div>
         <div className="center_container2">
-          <p className="text1_center">BẠN CÓ BIẾT?</p>
-          <img src={icon_center} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
-          <p className="text2_center">
-            Viêm âm đạo do vi khuẩn là{" "}
-            <span style={{ fontWeight: 600 }}>
-              tình trạng phổ biến và là nguyên nhân thường gặp nhất
-            </span>{" "}
-            gây ra tình trạng khí hư bất thường. Đừng lo lắng, hãy tìm hiểu và
-            thăm khám để có giải pháp phù hợp nhé! <sup>3</sup>
-          </p>
-          <p className="text3_center">
-            3.{" "}
-            <a
-              style={{ color: "white", textDecoration: "none" }}
-              href="https://www.cdc.gov/std/treatment-guidelines/bv.htm"
-              target="blank"
-            >
-              https://www.cdc.gov/std/treatment-guidelines/bv.htm
-            </a>
-          </p>
+          <div className="img_leftRS">
+            {" "}
+            <img src={icon_center} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
+          </div>
+          <div className="text_rightRS">
+            <p className="text1_center">BẠN CÓ BIẾT?</p>
+
+            <p className="text2_center">
+              Viêm âm đạo do vi khuẩn là{" "}
+              <span style={{ fontWeight: 600 }}>
+                tình trạng phổ biến và là nguyên nhân thường gặp nhất
+              </span>{" "}
+              gây ra tình trạng khí hư bất thường<sup>3</sup>. Đừng lo lắng, hãy
+              tìm hiểu và thăm khám để có giải pháp phù hợp nhé!
+            </p>
+            <p className="text3_center">
+              3.{" "}
+              <a
+                style={{ color: "white", textDecoration: "none" }}
+                href="https://www.cdc.gov/std/treatment-guidelines/bv.htm"
+                target="blank"
+              >
+                https://www.cdc.gov/std/treatment-guidelines/bv.htm
+              </a>
+            </p>
+          </div>
         </div>
         <div className="Dropdown_result_total">
           <div onClick={toggleDropdown} className="Info1">

@@ -52,7 +52,7 @@ export const questionsData = {
           img: img10,
         },
         { _id: 11, text: "Ngứa", img: img11 },
-        { _id: 12, text: "Kích ứng", img: img12 },
+        { _id: 12, text: "Mẩn đỏ", img: img12 },
         { _id: 13, text: "Đau rát", img: img13 },
       ],
     },

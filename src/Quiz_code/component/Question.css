@@ -70,7 +70,8 @@
   min-height: 250px;
   width: 400px;
   font-size: 24px;
-  padding-top: 80px; /* Để có khoảng cách giữa ảnh và nội dung */
+  padding-top: 80px;
+  color: black; /* Để có khoảng cách giữa ảnh và nội dung */
 }
 .activeBG {
   display: flex;
@@ -111,7 +112,8 @@
   margin-top: 30px;
   width: 400px;
   min-height: 200px;
-  padding-top: 100px; /* Để có khoảng cách giữa ảnh và nội dung */
+  padding-top: 100px;
+  color: black; /* Để có khoảng cách giữa ảnh và nội dung */
 }
 .content-box3 {
   border: none;

@@ -42,6 +42,7 @@ const Result1Op = () => {
               <span>
                 Có đến
                 <span style={{ fontWeight: 600 }}>
+                  {" "}
                   70-75% phụ nữ trong độ tuổi sinh sản bị nhiễm nấm âm đạo ít
                   nhất một lần trong đời.
                 </span>{" "}

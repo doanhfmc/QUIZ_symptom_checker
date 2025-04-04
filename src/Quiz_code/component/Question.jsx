@@ -92,7 +92,12 @@ function Question({ condition }) {
     setCurrentQuestion(currentQuestion + 1);
     setAnswers_select([]);
     setAnswerid(null);
-
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
     switch (answersid) {
       case 20:
         break;

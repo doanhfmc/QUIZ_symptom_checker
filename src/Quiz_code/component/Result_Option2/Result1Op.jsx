@@ -17,7 +17,11 @@ const Result1Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="NHIỄM NẤM ÂM ĐẠO" />
+            <img
+              className=""
+              src={img}
+              alt="Nấm âm đạo và những dấu hiệu ngứa ngáy, khó chịu!"
+            />
           </div>
           <div className="text_result_container">
             {" "}
@@ -25,7 +29,11 @@ const Result1Op = () => {
               Dựa trên triệu chứng bạn mô tả, bạn có thể đang bị{" "}
             </span>
             <p className="text3_result1">NHIỄM NẤM ÂM ĐẠO</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.canesten.com.vn/moi-dieu-ban-can-biet-ve-benh-nhiem-nam-am-dao"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={CTA} alt="NHIỄM NẤM ÂM ĐẠO" />
             </a>
           </div>

@@ -17,7 +17,11 @@ const Result2Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
+            <img
+              className=""
+              src={img}
+              alt={`Viêm âm đạo do vi khuẩn gây ảnh hưởng khí hư và sức khỏe "cô bé"`}
+            />
           </div>
           <div className="text_result_container">
             {" "}
@@ -25,7 +29,11 @@ const Result2Op = () => {
               Dựa trên triệu chứng bạn mô tả, bạn có thể đang bị{" "}
             </span>
             <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.canesten.com.vn/moi-dieu-can-biet-ve-viem-am-dao-do-vi-khuan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={CTA} alt="VIÊM ÂM ĐẠO DO VI KHUẨN" />
             </a>
           </div>

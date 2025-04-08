@@ -170,13 +170,16 @@ function Result5() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="LANG BEN" />
+          <img src={thumbmain} alt="Biểu hiện phổ biến của bệnh lang ben!" />
         </div>
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
           <p className="sick">LANG BEN</p>
-          <a href="#" target="blank">
+          <a
+            href="https://www.canesten.com.vn/Moi-dieu-ban-can-biet-ve-benh-lang-ben"
+            target="blank"
+          >
             <img src={Btn_Sol} alt="LANG BEN" />{" "}
           </a>
         </div>

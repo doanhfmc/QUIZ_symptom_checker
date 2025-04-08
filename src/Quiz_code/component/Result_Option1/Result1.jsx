@@ -55,7 +55,10 @@ const sliderData = [
         10.2174/1872213X14666200810152246. <br />
         2. Kellawan K, Andrasik W. Not All Round Rashes Are Ringworm: A
         Differential Diagnosis of Annular and Nummular Lesions. Available from:{" "}
-        <a href="https://www.reliasmedia.com/articles/143473-not-all-round-rashes-are-ringworm-a-differential-diagnosis-of-annular-and-nummular-lesions">
+        <a
+          href="https://www.reliasmedia.com/articles/143473-not-all-round-rashes-are-ringworm-a-differential-diagnosis-of-annular-and-nummular-lesions"
+          target="blank"
+        >
           https://www.reliasmedia.com/articles/143473-not-all-round-rashes-are-ringworm-a-differential-diagnosis-of-annular-and-nummular-lesions
         </a>
         .
@@ -85,7 +88,7 @@ const sliderData = [
         3. Tucker D, Masood S. Seborrheic Dermatitis. [Updated 2021 Aug 3]. In:
         StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022
         Jan. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK551707/.">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK551707/." target="blank">
           https://www.ncbi.nlm.nih.gov/books/NBK551707/.
         </a>
       </>
@@ -146,7 +149,10 @@ function Result1() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI" />
+          <img
+            src={thumbmain}
+            alt="Thú cưng có thể là nguồn lây nhiễm bệnh nấm da"
+          />
         </div>
         <div className="section_left">
           {" "}
@@ -156,7 +162,10 @@ function Result1() {
           <p className="sick" style={{}}>
             NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI
           </p>
-          <a href="#" target="blank">
+          <a
+            href="https://www.canesten.com.vn/moi-dieu-ban-can-biet-ve-nam-da-do-thu-cung"
+            target="blank"
+          >
             <img src={Btn_Sol} alt="NẤM DA LIÊN QUAN ĐẾN ĐỘNG VẬT NUÔI" />{" "}
           </a>
         </div>

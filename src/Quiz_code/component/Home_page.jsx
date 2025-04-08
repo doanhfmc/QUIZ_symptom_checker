@@ -6,6 +6,9 @@ const Home_page = () => {
   return (
     <div className="">
       <div className="Container">
+        <h1 style={{ display: "none" }}>
+          Nhận biết viêm nhiễm vùng kín, nấm da và các bệnh da liễu!
+        </h1>
         <div className="container_all">
           <div className="header_first"></div>
           <div className="footer_first">
@@ -29,7 +32,7 @@ const Home_page = () => {
             <div className="footer_first_button">
               <img
                 src={start}
-                alt="symptom checker"
+                alt="Nhận diện bệnh nấm da hoặc viêm âm hộ/viêm nhiễm vùng kín nhanh chóng với Công cụ Kiểm Tra Triệu Chứng"
                 onClick={() => navigate("/Option")}
               ></img>
             </div>

@@ -137,13 +137,16 @@ function Result2() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="HẮC LÀO" />
+          <img src={thumbmain} alt="Biểu hiện đặc trưng bệnh hắc lào!" />
         </div>
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
           <p className="sick">HẮC LÀO</p>
-          <a href="#" target="blank">
+          <a
+            href="https://www.canesten.com.vn/moi-dieu-ban-can-biet-ve-benh-hac-lao"
+            target="blank"
+          >
             <img src={Btn_Sol} alt="HẮC LÀO" />{" "}
           </a>
         </div>

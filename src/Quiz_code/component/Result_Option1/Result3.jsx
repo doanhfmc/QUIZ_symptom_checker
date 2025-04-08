@@ -153,13 +153,19 @@ function Result3() {
       <section className="result">
         {" "}
         <div className="section_rìght">
-          <img src={thumbmain} alt="NẤM KẼ CHÂN" />
+          <img
+            src={thumbmain}
+            alt="Dấu hiệu điển hình của hăm kẽ do vi khuẩn"
+          />
         </div>
         <div className="section_left">
           {" "}
           <p className="tilte_sick">Có thể bạn đang gặp bệnh</p>
           <p className="sick">NẤM KẼ CHÂN</p>
-          <a href="#" target="blank">
+          <a
+            href="https://www.canesten.com.vn/moi-dieu-can-biet-ve-nam-ke-chan-nam-da-chan"
+            target="blank"
+          >
             <img src={Btn_Sol} alt="NẤM KẼ CHÂN" />{" "}
           </a>
         </div>

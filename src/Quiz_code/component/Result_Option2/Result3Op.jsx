@@ -17,7 +17,11 @@ const Result3Op = () => {
       <div className="Result_container">
         <div className="Sick_result">
           <div className="img_result">
-            <img className="" src={img} alt="NHIỄM TRÙNG NƯỚC TIỂU" />
+            <img
+              className=""
+              src={img}
+              alt="Nhiễm trùng đường tiểu - một bệnh lý khá phổ biến"
+            />
           </div>
           <div className="text_result_container">
             {" "}
@@ -25,7 +29,11 @@ const Result3Op = () => {
               Dựa trên triệu chứng bạn mô tả, bạn có thể đang bị{" "}
             </span>
             <p className="text3_result1">NHIỄM TRÙNG NƯỚC TIỂU</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.canesten.com.vn/moi-dieu-can-biet-ve-nhiem-trung-duong-tieu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={CTA} alt="NHIỄM TRÙNG NƯỚC TIỂU" />
             </a>
           </div>

@@ -8,8 +8,6 @@ import thumbslide3 from "../../../img/Thumb_Slide/03 slider-chamtodia.jpg";
 import Arrow_prev from "../../../img/Button_img/slider icon 2.png";
 import Arrow_next from "../../../img/Button_img/slider icon.png";
 import Btn_Sol from "../../../img/Button_img/button tim hieu.png";
-import Info_Open from "../../../img/Button_img/button xem lai.png";
-import Info_Close from "../../../img/Button_img/button xem lai expand BG.png";
 import arrow from "../../../img/Button_img/mui ten.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -51,7 +49,7 @@ const sliderData = [
         1. Litchman G, Nair PA, Atwater AR, et al. Contact Dermatitis. [Updated
         2022 May 8]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls
         Publishing; 2022 Jan. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK459230/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK459230/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK459230/
         </a>
         . 2. Ely JW, Rosenfeld S, Seabury Stone M. Diagnosis and Management of

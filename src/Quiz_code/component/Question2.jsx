@@ -78,7 +78,7 @@ function Question2({ condition }) {
     ReactGA.event({
       event: "next_button_click",
       category: "User Interaction",
-      action: `ID  ${answersid} của câu ${question?.id} `,
+      action: `ID  ${answersid} của câu hỏi ${question?.id} của Nhiễm khuẩn `,
       label: `câu trả lời ${answersid}`,
     });
     increasePopulation({
@@ -337,12 +337,12 @@ function Question2({ condition }) {
                     textDecoration: "none",
                     color: "var(--color-white)",
                   }}
-                  href="https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;"
+                  href="https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html"
                   target="blank"
                 >
-                  https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html;
+                  https://www.cdc.gov/fungal/diseases/candidiasis/genital/index.html
                 </a>
-                Nasir R et al. Europasian J Med Sci 2023;5(1):1-10
+                ; Nasir R et al. Europasian J Med Sci 2023;5(1):1-10
               </p>
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>

@@ -46,7 +46,7 @@ const sliderData = [
         1. Pippin MM, Madden ML. Tinea Cruris. [Updated 2022 Feb 17]. In:
         StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022
         Jan. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK554602/
         </a>
       </>
@@ -68,7 +68,7 @@ const sliderData = [
         1. Pippin MM, Madden ML. Tinea Cruris. [Updated 2022 Feb 17]. In:
         StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022
         Jan. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK554602/
         </a>
       </>
@@ -94,7 +94,7 @@ const sliderData = [
         1. Pippin MM, Madden ML. Tinea Cruris. [Updated 2022 Feb 17]. In:
         StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022
         Jan. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK554602/
         </a>
       </>
@@ -127,13 +127,13 @@ const sliderData = [
         1. Pippin MM, Madden ML. Tinea Cruris. [Updated 2022 Feb 17]. In:
         StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022
         Jan. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK554602/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK554602/
         </a>
         2. Groves JB, Nassereddin A, Freeman AM. Erythrasma. [Updated 2021 Aug
         11]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls
         Publishing; 2022 Jan. Available from:
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK513352/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK513352/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK513352/
         </a>{" "}
         .

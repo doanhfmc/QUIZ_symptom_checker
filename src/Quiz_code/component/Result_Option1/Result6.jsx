@@ -45,7 +45,7 @@ const sliderData = [
         13. Groves JB, Nassereddin A, Freeman AM. Erythrasma. [Updated 2021 Aug
         11]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls
         Publishing; 2022 Jan. Available from:
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK513352/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK513352/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK513352/
         </a>
         .
@@ -74,7 +74,7 @@ const sliderData = [
         13. Groves JB, Nassereddin A, Freeman AM. Erythrasma. [Updated 2021 Aug
         11]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls
         Publishing; 2022 Jan. Available from:
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK513352/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK513352/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK513352/
         </a>
         .

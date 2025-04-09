@@ -78,7 +78,7 @@ function Question({ condition }) {
     ReactGA.event({
       event: "next_button_click",
       category: "User Interaction",
-      action: `ID  ${answersid} của câu ${question?.id} `,
+      action: `ID  ${answersid} của câu hỏi ${question?.id} của nấm da  `,
       label: `câu trả lời ${answersid}`,
     });
 

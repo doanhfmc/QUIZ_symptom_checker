@@ -43,13 +43,16 @@ const sliderData = [
         1. Kellawan K, Andrasik W. Not All Round Rashes Are Ringworm: A
         Differential Diagnosis of Annular and Nummular Lesions. [internet].
         [cited April 22, 2022]. Available from:
-        <a href="https://www.reliasmedia.com/articles/143473-not-all-round-rashes-are-ringworm-a-differential-diagnosis-of-annular-and-nummular-lesions">
+        <a
+          href="https://www.reliasmedia.com/articles/143473-not-all-round-rashes-are-ringworm-a-differential-diagnosis-of-annular-and-nummular-lesions"
+          target="_blank"
+        >
           https://www.reliasmedia.com/articles/143473-not-all-round-rashes-are-ringworm-a-differential-diagnosis-of-annular-and-nummular-lesions.
         </a>{" "}
         2. Litchman G, Nair PA, Le JK. Pityriasis Rosea. [Updated 2022 May 8].
         In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing;
         2022 Jan-. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK448091/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK448091/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK448091/
         </a>
         .
@@ -80,7 +83,7 @@ const sliderData = [
         5. Saleh D, Tanner LS. Guttate Psoriasis. [Updated 2021 Aug 3]. In:
         StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022
         Jan-. Available from:{" "}
-        <a href="https://www.ncbi.nlm.nih.gov/books/NBK482498/">
+        <a href="https://www.ncbi.nlm.nih.gov/books/NBK482498/" target="_blank">
           https://www.ncbi.nlm.nih.gov/books/NBK482498/
         </a>
         .

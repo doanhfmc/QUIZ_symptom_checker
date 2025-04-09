@@ -31,7 +31,7 @@ const Result4Op = () => {
               2 loại viêm âm đạo phổ biến nhất
             </span>
             <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
-            <p className="text3_result">VIÊM NẤM ÂM ĐẠO</p>
+            <p className="text3_result">NHIỄM NẤM ÂM ĐẠO</p>
             <a href="#" target="_blank" rel="noopener noreferrer">
               <img src={CTA} alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO" />
             </a>

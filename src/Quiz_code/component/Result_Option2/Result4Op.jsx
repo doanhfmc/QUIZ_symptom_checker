@@ -26,12 +26,11 @@ const Result4Op = () => {
           <div className="text_result_container">
             {" "}
             <span className="text_result">
-              Triệu chứng của bạn{" "}
-              <span style={{ color: "var(--red-color)" }}>không giống</span> với
-              2 loại viêm âm đạo phổ biến nhất
+              Triệu chứng của bạn có thể liên quan đến
             </span>
             <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
-            <p className="text3_result">NHIỄM NẤM ÂM ĐẠO</p>
+            <p className="text3_result">NHIỄM NẤM ÂM ĐẠO,</p>
+            <p className="text4_result">NHIỄM TRÙNG ĐƯỜNG TIỂU</p>
             <a href="#" target="_blank" rel="noopener noreferrer">
               <img src={CTA} alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO" />
             </a>

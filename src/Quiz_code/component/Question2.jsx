@@ -124,7 +124,7 @@ function Question2({ condition }) {
           dataSelect[4]?.answer4?.includes(43) &&
           dataSelect[8]?.answer8?.includes(83)
         ) {
-          navigate("/Result1Op");
+          navigate("/Result4Op");
           return;
         }
         if (
@@ -132,7 +132,7 @@ function Question2({ condition }) {
           dataSelect[4]?.answer4?.includes(42) &&
           dataSelect[8]?.answer8?.includes(83)
         ) {
-          navigate("/Result2Op");
+          navigate("/Result4Op");
           return;
         }
         if (
@@ -159,7 +159,7 @@ function Question2({ condition }) {
         dataSelect[4]?.answer4?.includes(43) &&
         dataSelect.length === 8
       ) {
-        navigate("/Result1Op");
+        navigate("/Result4Op");
         return;
       }
       if (
@@ -168,7 +168,7 @@ function Question2({ condition }) {
         dataSelect[4]?.answer4?.includes(42) &&
         dataSelect.length === 8
       ) {
-        navigate("/Result2Op");
+        navigate("/Result4Op");
         return;
       }
       if (!dataSelect[7]?.answer7?.includes(70) && dataSelect.length === 8) {

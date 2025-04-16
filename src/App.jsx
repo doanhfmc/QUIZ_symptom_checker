@@ -18,10 +18,13 @@ import Result2Op from "./Quiz_code/component/Result_Option2/Result2Op.jsx";
 import Result3Op from "./Quiz_code/component/Result_Option2/Result3Op.jsx";
 import Result4Op from "./Quiz_code/component/Result_Option2/Result4Op.jsx";
 import ScrollToTop from "./Quiz_code/component/scroll.js";
+import usePageView from "./Quiz_code/component/usePageView.js"; // dòng này ở trên ReactGA.initialize
+
 ReactGA.initialize("G-FXKNQKBJYX");
 const App = () => {
   return (
     <HashRouter>
+      <usePageView />
       <ScrollToTop />
       <Routes>
         {/* Trang chính là /cong-cu-kiem-tra-trieu-chung */}
@@ -30,16 +33,16 @@ const App = () => {
           <Route path="Option" element={<Optionquestion />} />
           <Route path="skin" element={<Question condition="skin" />} />
           <Route path="intimate" element={<Question2 condition="intimate" />} />
-          <Route path="result1" element={<Result />} />
-          <Route path="result2" element={<Result2 />} />
-          <Route path="result3" element={<Result3 />} />
-          <Route path="result4" element={<Result4 />} />
-          <Route path="result5" element={<Result5 />} />
-          <Route path="result6" element={<Result6 />} />
-          <Route path="result1Op" element={<Result1Op />} />
-          <Route path="result2Op" element={<Result2Op />} />
-          <Route path="result3Op" element={<Result3Op />} />
-          <Route path="result4Op" element={<Result4Op />} />
+          <Route path="nam-da-do-dong-vat" element={<Result />} />
+          <Route path="hac-lao" element={<Result2 />} />
+          <Route path="nam-ke-chan" element={<Result3 />} />
+          <Route path="nam-ben" element={<Result4 />} />
+          <Route path="lang-ben" element={<Result5 />} />
+          <Route path="viem-da-nep-ke" element={<Result6 />} />
+          <Route path="nhiem-nam-am-dao" element={<Result1Op />} />
+          <Route path="viem-am-dao" element={<Result2Op />} />
+          <Route path="nhiem-trung-duong-tieu" element={<Result3Op />} />
+          <Route path="trieu-chung-khac" element={<Result4Op />} />
         </Route>
       </Routes>
     </HashRouter>

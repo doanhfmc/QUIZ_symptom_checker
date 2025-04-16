@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useBearStore } from "../../store/app.js";
 import "./ResultOp.css";
-import CTA from "../../../img/Gyne/CTA 2.png";
+import CTA from "../../../img/Gyne/CTA3.png";
 import img from "../../../img/Gyne/thumb khong co trieu chung.png";
 import arrow from "../../../img/Button_img/mui ten.png";
 
@@ -31,7 +31,11 @@ const Result4Op = () => {
             <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
             <p className="text3_result">NHIỄM NẤM ÂM ĐẠO,</p>
             <p className="text4_result">NHIỄM TRÙNG ĐƯỜNG TIỂU</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.canesten.com.vn/viem-nhiem-vung-kin "
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={CTA} alt="VIÊM ÂM ĐẠO DO VI KHUẨN, VIÊM NẤM ÂM ĐẠO" />
             </a>
           </div>

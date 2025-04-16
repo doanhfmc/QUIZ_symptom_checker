@@ -106,22 +106,22 @@ function Question({ condition }) {
       case null:
         break;
       case 30:
-        navigate("/result1");
+        navigate("/nam-da-do-dong-vat");
         break;
       case 31:
-        navigate("/result2");
+        navigate("/hac-lao");
         break;
       case 22:
-        navigate("/result3");
+        navigate("/nam-ke-chan");
         break;
       case 23:
-        navigate("/result4");
+        navigate("/nam-ben");
         break;
       case 24:
-        navigate("/result5");
+        navigate("/lang-ben");
         break;
       case 25:
-        navigate("/result6");
+        navigate("/viem-da-nep-ke");
         break;
       default:
         break;

@@ -1,9 +1,8 @@
-// Quiz_code/component/GAListener.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 
-const usePageView = () => {
+const GAListener = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -13,7 +12,7 @@ const usePageView = () => {
     });
   }, [location]);
 
-  return null; // ❗ Không render gì cả
+  return null; // ❗ Không render gì ra
 };
 
-export default usePageView;
+export default GAListener;

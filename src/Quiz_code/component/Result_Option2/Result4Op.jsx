@@ -28,8 +28,8 @@ const Result4Op = () => {
             <span className="text_result">
               Triệu chứng của bạn có thể liên quan đến
             </span>
-            <p className="text2_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
-            <p className="text3_result">NHIỄM NẤM ÂM ĐẠO,</p>
+            <p className="text5_result">VIÊM ÂM ĐẠO DO VI KHUẨN,</p>
+            <p className="text3_result">VIÊM ÂM ĐẠO DO NẤM,</p>
             <p className="text4_result">NHIỄM TRÙNG ĐƯỜNG TIỂU</p>
             <a
               href="https://www.canesten.com.vn/viem-nhiem-vung-kin "

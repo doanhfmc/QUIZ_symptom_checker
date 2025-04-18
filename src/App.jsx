@@ -17,14 +17,14 @@ import Result1Op from "./Quiz_code/component/Result_Option2/Result1Op.jsx";
 import Result2Op from "./Quiz_code/component/Result_Option2/Result2Op.jsx";
 import Result3Op from "./Quiz_code/component/Result_Option2/Result3Op.jsx";
 import Result4Op from "./Quiz_code/component/Result_Option2/Result4Op.jsx";
+import GAListener from "./Quiz_code/component/GAListener";
 import ScrollToTop from "./Quiz_code/component/scroll.js";
-import usePageView from "./Quiz_code/component/usePageView.js"; // dòng này ở trên ReactGA.initialize
 
 ReactGA.initialize("G-FXKNQKBJYX");
 const App = () => {
   return (
     <HashRouter>
-      <usePageView />
+      <GAListener />
       <ScrollToTop />
       <Routes>
         {/* Trang chính là /cong-cu-kiem-tra-trieu-chung */}

@@ -61,10 +61,18 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.text5_result {
+  color: var(--blue-color);
+  text-shadow: -1px 0.8px 0px #eb569f;
+  font-size: 40px;
+  font-weight: bold;
+  width: 600px;
+  margin-top: 20px;
+}
 .text3_result {
   color: var(--blue-color);
   text-shadow: -1px 0.8px 0px #eb569f;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   width: 500px;
   text-align: center;
@@ -72,10 +80,11 @@
 .text4_result {
   color: var(--blue-color);
   text-shadow: -1px 0.8px 0px #eb569f;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
-  width: 638px;
+  width: 580px;
   text-align: center;
+  margin-bottom: 40px;
 }
 .text3_result1 {
   color: var(--blue-color);
@@ -176,7 +185,7 @@
   margin-top: 40px;
 }
 .Dropdown_result4 p {
-  width: 1400px;
+  width: 800px;
   height: 90px;
   margin: 0 auto;
   font-size: 32px;
@@ -324,6 +333,12 @@
     width: 79vw;
   }
   .text2_result {
+    font-size: 24px;
+    width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .text5_result {
     font-size: 24px;
     width: 100vw;
     margin-top: 10px;

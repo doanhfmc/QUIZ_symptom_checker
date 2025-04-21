@@ -15,9 +15,8 @@ const Layout = () => {
 
   return (
     <div className="layout_wrapper">
-      {/*Header */}
-      <header className="banner">
-        {/* Thanh điều hướng trên cùng */}
+      {/* <header className="banner">
+       
         <div className="top-nav">
           <div className="top-links">
             <a href="#">Về chúng tôi</a>
@@ -26,7 +25,7 @@ const Layout = () => {
           <div className="search-icon">🔍</div>
         </div>
 
-        {/* Nội dung chính của Banner */}
+ 
         <div className="main-nav">
           <img src="/logo-left.png" alt="Left Logo" className="left-logo" />
 
@@ -38,7 +37,7 @@ const Layout = () => {
 
           <img src="/bayer-logo.png" alt="Bayer Logo" className="right-logo" />
         </div>
-      </header>
+      </header> */}
       <p
         style={{
           color: "#c01b31",

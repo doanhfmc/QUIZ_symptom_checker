@@ -1,13 +1,13 @@
 /* 📜Header */
 
-.banner {
+/* .banner {
   width: 100%;
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Thanh trên cùng */
-.top-nav {
+/* .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,14 +28,14 @@
 }
 
 /* Điều hướng chính */
-.main-nav {
+/* .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 30px;
-}
+} */
 
-.left-logo {
+/* .left-logo {
   width: 60px;
   height: auto;
 }
@@ -59,7 +59,7 @@
 .right-logo {
   width: 50px;
   height: auto;
-}
+} */
 
 /* 📜 Reset cơ bản để tránh lỗi hiển thị */
 html,

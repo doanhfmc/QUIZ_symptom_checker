@@ -1,4 +1,3 @@
-import img from "../img/1.6.jpeg";
 import img10 from "../img/Q01_icon 1.png";
 import img11 from "../img/Q01_icon Ngua.png";
 import img12 from "../img/Q01_icon Kich ung.png";

@@ -20,7 +20,7 @@ import Result4Op from "./Quiz_code/component/Result_Option2/Result4Op.jsx";
 import GAListener from "./Quiz_code/component/GAListener";
 import ScrollToTop from "./Quiz_code/component/scroll.js";
 
-ReactGA.initialize("G-FXKNQKBJYX");
+ReactGA.initialize("G-4JCDQNL412");
 const App = () => {
   return (
     <HashRouter>
@@ -32,7 +32,7 @@ const App = () => {
           <Route index element={<Homepage />} />
           <Route path="Option" element={<Optionquestion />} />
           <Route path="skin" element={<Question condition="skin" />} />
-          <Route path="intimate" element={<Question2 condition="intimate" />} />
+          <Route path="gyne" element={<Question2 condition="intimate" />} />
           <Route path="nam-da-do-dong-vat" element={<Result />} />
           <Route path="hac-lao" element={<Result2 />} />
           <Route path="nam-ke-chan" element={<Result3 />} />

@@ -55,7 +55,7 @@ const Option_question = () => {
               onClick={() => handleConditionSelect("skin")}
             >
               <div className="card">
-                <img src={img1} alt="Skin & Foot Health" />
+                <img src={img1} alt="Nấm da" />
                 <p>
                   {" "}
                   <strong> Nấm da </strong>
@@ -64,10 +64,10 @@ const Option_question = () => {
             </div>
             <div
               className="card-wrapper"
-              onClick={() => handleConditionSelect("intimate")}
+              onClick={() => handleConditionSelect("gyne")}
             >
               <div className="card">
-                <img src={img2} alt="Women's Intimate Health" />
+                <img src={img2} alt="Viêm nhiễm phụ khoa" />
                 <p>
                   <strong>Viêm nhiễm phụ khoa</strong>{" "}
                 </p>
@@ -78,7 +78,7 @@ const Option_question = () => {
 
         <img
           src={footerImage}
-          alt=""
+          alt="footer"
           className="img_footer"
           style={{
             objectFit: "contain",
